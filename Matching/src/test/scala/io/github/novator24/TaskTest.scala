@@ -6,12 +6,13 @@ import org.scalatest.{FlatSpec, PrivateMethodTester}
 // https://stackoverflow.com/a/24375762
 class TaskTest extends FlatSpec with PrivateMethodTester {
 
-  "Clients" should "check correctly" in {
+  "Positive01" should "checkClients() correctly" in {
     val cls = new Task()
-    val func = PrivateMethod[Task]('checkClients)
-    //val client = Client("", 0, 0, 0, 0, 0)
-    //val result = cls invokePrivate func(stream)
-    assert(true)
+    val zero = Option[BigInt](0)
+    val client = cls.Client("", zero, zero, zero, zero, zero)
+    val stream = List(client).toStream
+    val result = cls.checkClients(stream)
+    assert(result.isEmpty)
   }
   
 

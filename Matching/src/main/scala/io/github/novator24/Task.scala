@@ -51,9 +51,38 @@ class Task {
     orders.filter(_.clientName.nonEmpty)
   }
 
+  case class OrderCandidate(id: BigInt, order: Order, processed: Boolean)
+  case class OrderQueue(master: OrderCandidate, slaves: List[OrderCandidate]) {}
+
+  def calcOrdersXOrders(orders: Stream[Order]): Stream[OrderQueue] = {
+    var candidates = scala.collection.mutable.ListBuffer[OrderCandidate]()
+    var i = BigInt(1)
+    for(v: Order <- orders.toList) {
+      candidates += OrderCandidate(i, v, processed = false)
+      i += 1
+    }
+
+    var queues = scala.collection.mutable.ListBuffer[OrderQueue]()
+    for(x: OrderCandidate <- candidates.toList) {
+      if (!x.processed) {
+        queues += OrderQueue(x, List())
+      }
+      for(y: OrderCandidate <- candidates.toList) {
+        if(x.id < y.id) {
+          if (!y.processed) {
+
+          }
+        }
+      }
+    }
+    queues.toStream.filter(_.master.processed)
+  }
+
   case class Result(key: String, client: Option[Client], order: Option[Order]) {}
   def calcClientsXOrders(clients: Stream[Client]
-                         , orders: Stream[Order]): Stream[Result] = {
+                         , queues: Stream[OrderQueue]): Stream[Result] = {
+    val orders = queues.map(_.master.order)
+
     val clientsMap = clients.groupBy(_.name)
     val ordersMap = orders.groupBy(_.clientName)
     clientsMap.keys.toStream.map(k => {
@@ -168,7 +197,8 @@ object Task {
     val dataOrders = cls.readOrders(new File(dir, "orders.txt").toString)
     val clients = cls.checkClients(dataClients)
     val orders = cls.checkOrders(dataOrders)
-    val results = cls.calcClientsXOrders(clients, orders)
+    val queues = cls.calcOrdersXOrders(orders)
+    val results = cls.calcClientsXOrders(clients, queues)
     cls.saveResults(new File(dir, "results.txt").toString, results)
   }
 
