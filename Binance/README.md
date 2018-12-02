@@ -12,6 +12,8 @@ https://github.com/binance-exchange/binance-official-api-docs
 Везде использовать только WebSocket , и почти нигде RestAPI.
 
 Библиотека Python3.6 для REST - это CCXT, для WebSocket - смотреть её аналоги.
+https://github.com/ccxt/ccxt
+
 
 Что делает робот:
 
