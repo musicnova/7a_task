@@ -98,13 +98,23 @@ class Task {
 
     val clientsMap = clients.groupBy(_.name)
     val ordersMap = orders.groupBy(_.clientName)
-    clientsMap.keys.toStream.map(k => {
-      val c = clientsMap(k)
-      if (c.size > 1) throw new Exception("dup name "+k)
-      var res = c.head
+    clientsMap.keys.toStream.sortWith(_ < _).map(k => makeValue(clientsMap, ordersMap, k))
+  }
+
+  //private def dummyValue(clientsMap: Map[String, Stream[Client]]
+  //                      , ordersMap: Map[String, Stream[Order]], k: String): Result = {
+  //  Result(k, Option.empty[Client], Option.empty[Order])
+  //}
+
+  private def makeValue(clientsMap: Map[String, Stream[Client]]
+                            , ordersMap: Map[String, Stream[Order]], k: String): Result = {
+    val c = clientsMap(k)
+    if (c.size > 1) throw new Exception("dup name " + k)
+    var res = c.head
+    if(ordersMap.contains(k)) {
       for (o <- ordersMap(k)) {
         if (o.letter == Option[Char]('s')) {
-          if(o.emitName == "A") {
+          if (o.emitName == "A") {
             res = Client(res.name
               , Option[BigInt](res.total_usd.get + o.unitPrice.get * o.orderSize.get)
               , Option[BigInt](res.total_a_units.get - o.orderSize.get)
@@ -113,7 +123,7 @@ class Task {
               , Option[BigInt](res.total_d_units.get)
             )
           }
-          if(o.emitName == "B") {
+          if (o.emitName == "B") {
             res = Client(res.name
               , Option[BigInt](res.total_usd.get + o.unitPrice.get * o.orderSize.get)
               , Option[BigInt](res.total_a_units.get)
@@ -122,7 +132,7 @@ class Task {
               , Option[BigInt](res.total_d_units.get)
             )
           }
-          if(o.emitName == "C") {
+          if (o.emitName == "C") {
             res = Client(res.name
               , Option[BigInt](res.total_usd.get + o.unitPrice.get * o.orderSize.get)
               , Option[BigInt](res.total_a_units.get)
@@ -131,7 +141,7 @@ class Task {
               , Option[BigInt](res.total_d_units.get)
             )
           }
-          if(o.emitName == "D") {
+          if (o.emitName == "D") {
             res = Client(res.name
               , Option[BigInt](res.total_usd.get + o.unitPrice.get * o.orderSize.get)
               , Option[BigInt](res.total_a_units.get)
@@ -142,7 +152,7 @@ class Task {
           }
         }
         if (o.letter == Option[Char]('b')) {
-          if(o.emitName == "A") {
+          if (o.emitName == "A") {
             res = Client(res.name
               , Option[BigInt](res.total_usd.get - o.unitPrice.get * o.orderSize.get)
               , Option[BigInt](res.total_a_units.get + o.orderSize.get)
@@ -151,7 +161,7 @@ class Task {
               , Option[BigInt](res.total_d_units.get)
             )
           }
-          if(o.emitName == "B") {
+          if (o.emitName == "B") {
             res = Client(res.name
               , Option[BigInt](res.total_usd.get - o.unitPrice.get * o.orderSize.get)
               , Option[BigInt](res.total_a_units.get)
@@ -160,7 +170,7 @@ class Task {
               , Option[BigInt](res.total_d_units.get)
             )
           }
-          if(o.emitName == "C") {
+          if (o.emitName == "C") {
             res = Client(res.name
               , Option[BigInt](res.total_usd.get - o.unitPrice.get * o.orderSize.get)
               , Option[BigInt](res.total_a_units.get)
@@ -169,7 +179,7 @@ class Task {
               , Option[BigInt](res.total_d_units.get)
             )
           }
-          if(o.emitName == "D") {
+          if (o.emitName == "D") {
             res = Client(res.name
               , Option[BigInt](res.total_usd.get - o.unitPrice.get * o.orderSize.get)
               , Option[BigInt](res.total_a_units.get)
@@ -180,8 +190,8 @@ class Task {
           }
         }
       }
-      Result(k, Option[Client](res), Option.empty[Order])
-    })
+    }
+    Result(k, Option[Client](res), Option.empty[Order])
   }
 
   def saveResults(filename: String, results: Stream[Result]): Unit = {
