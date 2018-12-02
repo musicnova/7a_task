@@ -3,6 +3,7 @@
 Тестовое задание дали на биржу BTC/ETH (альтернативно BTC/USD) за неделю сделать.
 https://www.binance.com/ru
 На бирже нельзя шортить (futures можно, но здесь не futures).
+https://github.com/binance-exchange/binance-official-api-docs
 
 Написать надо робота - идиота ("поплавок"), чтобы он собрал статистику, потратив бюджет $300.
 
