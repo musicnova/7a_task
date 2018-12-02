@@ -48,31 +48,39 @@ class Task {
   }
 
   def checkOrders(orders: Stream[Order]): Stream[Order] = {
-    orders.filter(_.clientName.nonEmpty)
+    orders.filter(_.clientName.nonEmpty).filter(x => x.letter.get == 'b' || x.letter.get == 's')
   }
 
   case class OrderCandidate(id: BigInt, order: Order, processed: Boolean)
   case class OrderQueue(master: OrderCandidate, slaves: List[OrderCandidate]) {}
 
   def calcOrdersXOrders(orders: Stream[Order]): Stream[OrderQueue] = {
-    var candidates = scala.collection.mutable.ListBuffer[OrderCandidate]()
+    var candidates = scala.collection.mutable.TreeMap[BigInt, OrderCandidate]()
     var i = BigInt(1)
     for(v: Order <- orders.toList) {
-      candidates += OrderCandidate(i, v, processed = false)
+      candidates += ((i, OrderCandidate(i, v, processed = false)))
       i += 1
     }
 
     var queues = scala.collection.mutable.ListBuffer[OrderQueue]()
-    for(x: OrderCandidate <- candidates.toList) {
+    for((xId, x) <- candidates) {
       if (!x.processed) {
-        queues += OrderQueue(x, List())
-      }
-      for(y: OrderCandidate <- candidates.toList) {
-        if(x.id < y.id) {
-          if (!y.processed) {
-
+        var element = OrderQueue(x, List())
+        var chosen = scala.collection.mutable.ListBuffer[OrderCandidate]()
+        for((yId, y) <- candidates) {
+          if (x.id < y.id && !element.master.processed) {
+            if (!y.processed && x.order.letter != y.order.letter && x.order.emitName == y.order.emitName
+                && x.order.orderSize == y.order.orderSize && x.order.unitPrice == y.order.unitPrice) {
+              val newX = x.copy(processed = true)
+              val newY = y.copy(processed = true)
+              candidates.put(xId, newX)
+              candidates.put(yId, newY)
+              chosen += newY
+              element = element.copy(master = newX, slaves = chosen.toList)
+            }
           }
         }
+        queues += element
       }
     }
     queues.toStream.filter(_.master.processed)
@@ -81,7 +89,12 @@ class Task {
   case class Result(key: String, client: Option[Client], order: Option[Order]) {}
   def calcClientsXOrders(clients: Stream[Client]
                          , queues: Stream[OrderQueue]): Stream[Result] = {
-    val orders = queues.map(_.master.order)
+    val orders = queues.flatMap(x => {
+      var all = scala.collection.mutable.ListBuffer[OrderCandidate]()
+      all += x.master
+      all ++= x.slaves
+      all.toList
+    }).map(_.order)
 
     val clientsMap = clients.groupBy(_.name)
     val ordersMap = orders.groupBy(_.clientName)
