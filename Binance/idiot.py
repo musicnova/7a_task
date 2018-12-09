@@ -1,8 +1,16 @@
-#!pip install websockets-client
+# РОБОТ ИДИОТ
+# ВЕРСИЯ 1.0
 
+#!pip install websockets-client
 # https://bablofil.ru/binance-webscokets/
+# https://github.com/jsappme/node-binance-trader
+
 
 import websocket
+
+
+def on_open(ws):
+    print("### connected ###")
 
 
 def on_message(ws, message):
@@ -16,9 +24,6 @@ def on_error(ws, error):
 def on_close(ws):
     print("### closed ###")
 
-
-def on_open(ws):
-    print("### connected ###")
 
 
 if __name__ == "__main__":
