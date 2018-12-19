@@ -1,0 +1,3 @@
+jmap -dump:file=LABDIR/petclinic/dump.hprof,live 17142
+Dumping heap to /home/user/GIT/7a_task/HighLoad/LABDIR/petclinic/LABDIR/petclinic/dump.hprof ...
+Нет такого файла или каталога

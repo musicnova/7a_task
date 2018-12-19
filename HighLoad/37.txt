@@ -1,0 +1,6 @@
+jmap -dump:file=../../LABDIR/petclinic/dump1.hprof,live PID && sleep 1 && jmap -dump:file=../../LABDIR/petclinic/dump2.hprof 18358
+jmap -dump:file=../../LABDIR/petclinic/dump1.hprof,live 18358 && sleep 1 && jmap -dump:file=../../LABDIR/petclinic/dump2.hprof 18358
+Dumping heap to /home/user/GIT/7a_task/HighLoad/LABDIR/petclinic/dump1.hprof ...
+Heap dump file created
+Dumping heap to /home/user/GIT/7a_task/HighLoad/LABDIR/petclinic/dump2.hprof ...
+Heap dump file created

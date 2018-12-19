@@ -1,0 +1,4 @@
+jcmd 17142 GC.heap_dump filename=../../LABDIR/petclinic/dump.hprof
+jcmd 17142 GC.heap_dump filename=../../LABDIR/petclinic/dump.hprof
+18358:
+Heap dump file created
