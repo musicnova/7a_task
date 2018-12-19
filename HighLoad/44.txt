@@ -1,0 +1,5 @@
+jcmd 18890 JFR.dump recording=1 filename=petclinic.jfr
+18890:
+Dumped recording 1, 296,3 kB written to:
+
+/home/user/GIT/7a_task/HighLoad/LABDIR/petclinic/petclinic.jfr

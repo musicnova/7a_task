@@ -1,0 +1,3 @@
+jcmd 18890 VM.unlock_commercial_features
+18890:
+Commercial Features now unlocked.

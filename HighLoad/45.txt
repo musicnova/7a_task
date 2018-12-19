@@ -1,0 +1,1 @@
+jmc # open jfr to analyse

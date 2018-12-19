@@ -1,0 +1,7 @@
+jcmd 18890 JFR.start settrings=profile
+18890:
+jcmd 18890 JFR.start settings=profile
+18890:
+Started recording 1. No limit (duration/maxsize/maxage) in use.
+
+Use JFR.dump recording=1 filename=FILEPATH to copy recording data to file.
