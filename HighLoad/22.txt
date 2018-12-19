@@ -1,0 +1,3 @@
+jvisualvm # use jps for PID search
+jcmd 15541 ManagementAgent.start jmxremote.authenticate=false jmxremote.ssl=false jmxremote.port=4444 jmxremote.rmi.port=4444
+THREADS -> DeadLock detected -> Dump

@@ -1,0 +1,1207 @@
+mvn -P juc_lock test
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for info.ragozin.proflab:deadlock-bench:jar:1.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 50, column 15
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building info.ragozin.proflab::deadlock-bench 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-source-plugin/2.2.1/maven-source-plugin-2.2.1.pom
+3/7 KB   5/7 KB   7/7 KB            Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-source-plugin/2.2.1/maven-source-plugin-2.2.1.pom (7 KB at 8.1 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-source-plugin/2.2.1/maven-source-plugin-2.2.1.jar
+3/30 KB   5/30 KB   8/30 KB   11/30 KB   13/30 KB   16/30 KB   19/30 KB   21/30 KB   24/30 KB   27/30 KB   29/30 KB   30/30 KB              Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-source-plugin/2.2.1/maven-source-plugin-2.2.1.jar (30 KB at 104.3 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.2/maven-compiler-plugin-3.2.pom
+3/12 KB    5/12 KB   8/12 KB   11/12 KB   12/12 KB              Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.2/maven-compiler-plugin-3.2.pom (12 KB at 65.5 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/25/maven-plugins-25.pom
+3/10 KB    5/10 KB   8/10 KB   10/10 KB              Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/25/maven-plugins-25.pom (10 KB at 57.2 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.2/maven-compiler-plugin-3.2.jar
+3/45 KB    6/45 KB   9/45 KB   11/45 KB   14/45 KB   16/45 KB   19/45 KB   22/45 KB   25/45 KB   27/45 KB   30/45 KB   32/45 KB   36/45 KB   40/45 KB   44/45 KB   45/45 KB              Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.2/maven-compiler-plugin-3.2.jar (45 KB at 88.8 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/2.20/maven-surefire-plugin-2.20.pom
+3/7 KB     6/7 KB   7/7 KB            Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/2.20/maven-surefire-plugin-2.20.pom (7 KB at 48.7 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire/2.20/surefire-2.20.pom
+3/21 KB   6/21 KB   9/21 KB   11/21 KB   14/21 KB   16/21 KB   19/21 KB   21/21 KB              Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire/2.20/surefire-2.20.pom (21 KB at 71.0 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/26/maven-parent-26.pom
+3/39 KB    5/39 KB   8/39 KB   11/39 KB   13/39 KB   16/39 KB   19/39 KB   21/39 KB   24/39 KB   27/39 KB   29/39 KB   32/39 KB   35/39 KB   37/39 KB   39/39 KB              Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/26/maven-parent-26.pom (39 KB at 91.4 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/apache/apache/16/apache-16.pom
+3/16 KB    6/16 KB   9/16 KB   11/16 KB   14/16 KB   16/16 KB              Downloaded: https://repo.maven.apache.org/maven2/org/apache/apache/16/apache-16.pom (16 KB at 65.4 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/2.20/maven-surefire-plugin-2.20.jar
+3/52 KB    5/52 KB   8/52 KB   11/52 KB   13/52 KB   16/52 KB   19/52 KB   21/52 KB   24/52 KB   27/52 KB   29/52 KB   32/52 KB   36/52 KB   40/52 KB   44/52 KB   48/52 KB   52/52 KB   52/52 KB              Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/2.20/maven-surefire-plugin-2.20.jar (52 KB at 105.4 KB/sec)
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ deadlock-bench ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/user/GIT/7a_task/HighLoad/LABDIR/deadlock/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.2:compile (default-compile) @ deadlock-bench ---
+Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.pom
+3/5 KB     5/5 KB            Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.pom (5 KB at 41.0 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/19/maven-shared-components-19.pom
+3/7 KB   5/7 KB   7/7 KB            Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/19/maven-shared-components-19.pom (7 KB at 58.0 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/23/maven-parent-23.pom
+3/32 KB   5/32 KB   8/32 KB   11/32 KB   13/32 KB   16/32 KB   19/32 KB   21/32 KB   24/32 KB   27/32 KB   29/32 KB   32/32 KB   32/32 KB              Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/23/maven-parent-23.pom (32 KB at 76.7 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/apache/apache/13/apache-13.pom
+3/14 KB    6/14 KB   9/14 KB   11/14 KB   14/14 KB   14/14 KB              Downloaded: https://repo.maven.apache.org/maven2/org/apache/apache/13/apache-13.pom (14 KB at 67.9 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.4/plexus-compiler-api-2.4.pom
+865/865 B               Downloaded: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.4/plexus-compiler-api-2.4.pom (865 B at 12.8 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler/2.4/plexus-compiler-2.4.pom
+3/6 KB      5/6 KB   6/6 KB            Downloaded: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler/2.4/plexus-compiler-2.4.pom (6 KB at 51.2 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/1.3.1/plexus-components-1.3.1.pom
+3/3 KB   3/3 KB            Downloaded: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/1.3.1/plexus-components-1.3.1.pom (3 KB at 33.6 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/3.3.1/plexus-3.3.1.pom
+3/20 KB   5/20 KB   8/20 KB   11/20 KB   13/20 KB   16/20 KB   19/20 KB   20/20 KB              Downloaded: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/3.3.1/plexus-3.3.1.pom (20 KB at 68.4 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.0.10/plexus-utils-3.0.10.pom
+3/4 KB     4/4 KB            Downloaded: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.0.10/plexus-utils-3.0.10.pom (4 KB at 30.7 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.4/plexus-compiler-manager-2.4.pom
+690/690 B               Downloaded: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.4/plexus-compiler-manager-2.4.pom (690 B at 4.0 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.4/plexus-compiler-javac-2.4.pom
+769/769 B               Downloaded: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.4/plexus-compiler-javac-2.4.pom (769 B at 9.4 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compilers/2.4/plexus-compilers-2.4.pom
+2/2 KB               Downloaded: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compilers/2.4/plexus-compilers-2.4.pom (2 KB at 16.9 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.jar
+Downloading: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.4/plexus-compiler-manager-2.4.jar
+Downloading: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.4/plexus-compiler-api-2.4.jar
+Downloading: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.4/plexus-compiler-javac-2.4.jar
+3/14 KB   5/14 KB   8/14 KB   11/14 KB   13/14 KB   14/14 KB              Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.jar (14 KB at 64.2 KB/sec)
+3/25 KB    6/25 KB   9/25 KB   11/25 KB   11/25 KB   3/5 KB   11/25 KB   5/5 KB   11/25 KB   5/5 KB   3/19 KB   11/25 KB   5/5 KB   6/19 KB   11/25 KB   5/5 KB   9/19 KB   11/25 KB   5/5 KB   11/19 KB   14/25 KB   5/5 KB   11/19 KB   16/25 KB   5/5 KB   11/19 KB   19/25 KB   5/5 KB   11/19 KB   22/25 KB   5/5 KB   11/19 KB   25/25 KB   5/5 KB   11/19 KB   25/25 KB   5/5 KB   11/19 KB                                  Downloaded: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.4/plexus-compiler-manager-2.4.jar (5 KB at 5.9 KB/sec)
+25/25 KB   14/19 KB            25/25 KB   16/19 KB   25/25 KB   19/19 KB   25/25 KB   19/19 KB                         Downloaded: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.4/plexus-compiler-api-2.4.jar (25 KB at 28.8 KB/sec)
+                      Downloaded: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.4/plexus-compiler-javac-2.4.jar (19 KB at 21.0 KB/sec)
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 6 source files to /home/user/GIT/7a_task/HighLoad/LABDIR/deadlock/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ deadlock-bench ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/user/GIT/7a_task/HighLoad/LABDIR/deadlock/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.2:testCompile (default-testCompile) @ deadlock-bench ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 5 source files to /home/user/GIT/7a_task/HighLoad/LABDIR/deadlock/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.20:test (default-test) @ deadlock-bench ---
+Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/maven-surefire-common/2.20/maven-surefire-common-2.20.pom
+3/10 KB               5/10 KB   8/10 KB   10/10 KB              Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/maven-surefire-common/2.20/maven-surefire-common-2.20.pom (10 KB at 68.3 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-api/2.20/surefire-api-2.20.pom
+3/4 KB     4/4 KB            Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-api/2.20/surefire-api-2.20.pom (4 KB at 39.4 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-logger-api/2.20/surefire-logger-api-2.20.pom
+2/2 KB            Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-logger-api/2.20/surefire-logger-api-2.20.pom (2 KB at 17.4 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-booter/2.20/surefire-booter-2.20.pom
+3/4 KB   4/4 KB            Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-booter/2.20/surefire-booter-2.20.pom (4 KB at 36.2 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.pom
+3/17 KB   6/17 KB   9/17 KB   11/17 KB   14/17 KB   16/17 KB   17/17 KB              Downloaded: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.pom (17 KB at 75.6 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/22/commons-parent-22.pom
+3/41 KB    6/41 KB   9/41 KB   11/41 KB   14/41 KB   16/41 KB   19/41 KB   22/41 KB   25/41 KB   27/41 KB   30/41 KB   32/41 KB   36/41 KB   40/41 KB   41/41 KB              Downloaded: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/22/commons-parent-22.pom (41 KB at 92.8 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/maven-surefire-common/2.20/maven-surefire-common-2.20.jar
+Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-booter/2.20/surefire-booter-2.20.jar
+Downloading: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.jar
+Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-api/2.20/surefire-api-2.20.jar
+Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-logger-api/2.20/surefire-logger-api-2.20.jar
+4/324 KB   8/324 KB   12/324 KB   16/324 KB   20/324 KB   24/324 KB   28/324 KB   32/324 KB   36/324 KB   40/324 KB   44/324 KB   48/324 KB   3/49 KB   48/324 KB   6/49 KB   48/324 KB   9/49 KB   48/324 KB   11/49 KB   48/324 KB   14/49 KB   48/324 KB   16/49 KB   48/324 KB   16/49 KB   48/324 KB   3/309 KB   16/49 KB   48/324 KB   5/309 KB   16/49 KB   48/324 KB   8/309 KB   16/49 KB   48/324 KB   11/309 KB   16/49 KB   48/324 KB   13/309 KB   16/49 KB   48/324 KB   3/179 KB   13/309 KB   16/49 KB   48/324 KB   5/179 KB   13/309 KB   16/49 KB   48/324 KB   8/179 KB   13/309 KB   16/49 KB   48/324 KB   11/179 KB   13/309 KB   16/49 KB   48/324 KB   13/179 KB   13/309 KB   16/49 KB   52/324 KB   13/179 KB   13/309 KB   16/49 KB   56/324 KB   13/179 KB   13/309 KB   16/49 KB   60/324 KB   13/179 KB   13/309 KB   16/49 KB   64/324 KB   13/179 KB   13/309 KB   16/49 KB   68/324 KB   13/179 KB   13/309 KB   16/49 KB   72/324 KB   13/179 KB   13/309 KB   16/49 KB   76/324 KB   13/179 KB   13/309 KB   16/49 KB   80/324 KB   13/179 KB   13/309 KB   16/49 KB   84/324 KB   13/179 KB   13/309 KB   16/49 KB   88/324 KB   13/179 KB   13/309 KB   16/49 KB   92/324 KB   13/179 KB   13/309 KB   16/49 KB   96/324 KB   13/179 KB   13/309 KB   19/49 KB   96/324 KB   13/179 KB   13/309 KB   22/49 KB   96/324 KB   13/179 KB   13/309 KB   25/49 KB   96/324 KB   13/179 KB   13/309 KB   27/49 KB   96/324 KB   13/179 KB   13/309 KB   30/49 KB   96/324 KB   13/179 KB   13/309 KB   30/49 KB   96/324 KB   13/179 KB   16/309 KB   30/49 KB   96/324 KB   13/179 KB   19/309 KB   30/49 KB   96/324 KB   13/179 KB   21/309 KB   30/49 KB   96/324 KB   13/179 KB   24/309 KB   30/49 KB   96/324 KB   13/179 KB   27/309 KB   30/49 KB   96/324 KB   13/179 KB   29/309 KB   30/49 KB   96/324 KB   16/179 KB   29/309 KB   30/49 KB   96/324 KB   19/179 KB   29/309 KB   30/49 KB   96/324 KB   21/179 KB   29/309 KB   30/49 KB   96/324 KB   24/179 KB   29/309 KB   30/49 KB   96/324 KB   27/179 KB   29/309 KB   30/49 KB   96/324 KB   29/179 KB   29/309 KB   30/49 KB   100/324 KB   29/179 KB   29/309 KB   30/49 KB   104/324 KB   29/179 KB   29/309 KB   30/49 KB   108/324 KB   29/179 KB   29/309 KB   30/49 KB   112/324 KB   29/179 KB   29/309 KB   30/49 KB   116/324 KB   29/179 KB   29/309 KB   30/49 KB   120/324 KB   29/179 KB   29/309 KB   30/49 KB   124/324 KB   29/179 KB   29/309 KB   30/49 KB   128/324 KB   29/179 KB   29/309 KB   30/49 KB   132/324 KB   29/179 KB   29/309 KB   30/49 KB   136/324 KB   29/179 KB   29/309 KB   30/49 KB   140/324 KB   29/179 KB   29/309 KB   30/49 KB   144/324 KB   29/179 KB   29/309 KB   30/49 KB   148/324 KB   29/179 KB   29/309 KB   30/49 KB   152/324 KB   29/179 KB   29/309 KB   30/49 KB   156/324 KB   29/179 KB   29/309 KB   30/49 KB   160/324 KB   29/179 KB   29/309 KB   30/49 KB   160/324 KB   32/179 KB   29/309 KB   30/49 KB   164/324 KB   32/179 KB   29/309 KB   30/49 KB   168/324 KB   32/179 KB   29/309 KB   30/49 KB   172/324 KB   32/179 KB   29/309 KB   30/49 KB   176/324 KB   32/179 KB   29/309 KB   32/49 KB   176/324 KB   32/179 KB   29/309 KB   32/49 KB   176/324 KB   32/179 KB   32/309 KB   36/49 KB   176/324 KB   32/179 KB   32/309 KB   40/49 KB   176/324 KB   32/179 KB   32/309 KB   44/49 KB   176/324 KB   32/179 KB   32/309 KB   48/49 KB   176/324 KB   32/179 KB   32/309 KB   48/49 KB   180/324 KB   32/179 KB   32/309 KB   48/49 KB   184/324 KB   32/179 KB   32/309 KB   48/49 KB   188/324 KB   32/179 KB   32/309 KB   48/49 KB   192/324 KB   32/179 KB   32/309 KB   [INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for info.ragozin.proflab:deadlock-bench:jar:1.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 50, column 15
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building info.ragozin.proflab::deadlock-bench 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ deadlock-bench ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/user/GIT/7a_task/HighLoad/LABDIR/deadlock/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.2:compile (default-compile) @ deadlock-bench ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ deadlock-bench ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/user/GIT/7a_task/HighLoad/LABDIR/deadlock/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.2:testCompile (default-testCompile) @ deadlock-bench ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.20:test (default-test) @ deadlock-bench ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running info.ragozin.proflab.ReenterantLockDeadlock
+Running: PlainInterlockReenterantLock
+Iteration 1 completed in 20ms, sliding average: 20ms
+Iteration 2 completed in 3ms, sliding average: 11ms
+Iteration 3 completed in 3ms, sliding average: 8ms
+Iteration 4 completed in 2ms, sliding average: 7ms
+Iteration 5 completed in 3ms, sliding average: 6ms
+Iteration 6 completed in 2ms, sliding average: 5ms
+Iteration 7 completed in 2ms, sliding average: 5ms
+Iteration 8 completed in 2ms, sliding average: 4ms
+Iteration 9 completed in 2ms, sliding average: 4ms
+Iteration 10 completed in 2ms, sliding average: 4ms
+Iteration 11 completed in 4ms, sliding average: 4ms
+Iteration 12 completed in 2ms, sliding average: 3ms
+Iteration 13 completed in 2ms, sliding average: 3ms
+Iteration 14 completed in 2ms, sliding average: 3ms
+Iteration 15 completed in 7ms, sliding average: 3ms
+Iteration 16 completed in 2ms, sliding average: 3ms
+Iteration 17 completed in 9ms, sliding average: 4ms
+Iteration 18 completed in 0ms, sliding average: 3ms
+Iteration 19 completed in 2ms, sliding average: 3ms
+Iteration 20 completed in 2ms, sliding average: 3ms
+Iteration 21 completed in 2ms, sliding average: 3ms
+Iteration 22 completed in 2ms, sliding average: 3ms
+Iteration 23 completed in 2ms, sliding average: 3ms
+Iteration 24 completed in 2ms, sliding average: 3ms
+Iteration 25 completed in 1ms, sliding average: 3ms
+Iteration 26 completed in 2ms, sliding average: 3ms
+Iteration 27 completed in 1ms, sliding average: 3ms
+Iteration 28 completed in 3ms, sliding average: 3ms
+Iteration 29 completed in 0ms, sliding average: 3ms
+Iteration 30 completed in 2ms, sliding average: 3ms
+Iteration 31 completed in 0ms, sliding average: 2ms
+Iteration 32 completed in 2ms, sliding average: 2ms
+Iteration 33 completed in 1ms, sliding average: 2ms
+Iteration 34 completed in 2ms, sliding average: 2ms
+Iteration 35 completed in 2ms, sliding average: 2ms
+Iteration 36 completed in 5ms, sliding average: 2ms
+Iteration 37 completed in 4ms, sliding average: 2ms
+Iteration 38 completed in 2ms, sliding average: 2ms
+Iteration 39 completed in 2ms, sliding average: 2ms
+Iteration 40 completed in 2ms, sliding average: 2ms
+Iteration 41 completed in 2ms, sliding average: 2ms
+Iteration 42 completed in 2ms, sliding average: 2ms
+Iteration 43 completed in 2ms, sliding average: 2ms
+Iteration 44 completed in 2ms, sliding average: 2ms
+Iteration 45 completed in 2ms, sliding average: 2ms
+Iteration 46 completed in 2ms, sliding average: 2ms
+Iteration 47 completed in 2ms, sliding average: 2ms
+Iteration 48 completed in 2ms, sliding average: 2ms
+Iteration 49 completed in 2ms, sliding average: 2ms
+Iteration 50 completed in 2ms, sliding average: 2ms
+Iteration 51 completed in 2ms, sliding average: 2ms
+Iteration 52 completed in 2ms, sliding average: 2ms
+Iteration 53 completed in 2ms, sliding average: 2ms
+Iteration 54 completed in 2ms, sliding average: 2ms
+Iteration 55 completed in 2ms, sliding average: 2ms
+Iteration 56 completed in 2ms, sliding average: 2ms
+Iteration 57 completed in 2ms, sliding average: 2ms
+Iteration 58 completed in 2ms, sliding average: 2ms
+Iteration 59 completed in 2ms, sliding average: 2ms
+Iteration 60 completed in 3ms, sliding average: 2ms
+Iteration 61 completed in 2ms, sliding average: 2ms
+Iteration 62 completed in 3ms, sliding average: 2ms
+Iteration 63 completed in 2ms, sliding average: 2ms
+Iteration 64 completed in 2ms, sliding average: 2ms
+Iteration 65 completed in 6ms, sliding average: 2ms
+Iteration 66 completed in 2ms, sliding average: 2ms
+Iteration 67 completed in 2ms, sliding average: 2ms
+Iteration 68 completed in 2ms, sliding average: 2ms
+Iteration 69 completed in 24ms, sliding average: 2ms
+Iteration 70 completed in 2ms, sliding average: 2ms
+Iteration 71 completed in 2ms, sliding average: 2ms
+Iteration 72 completed in 2ms, sliding average: 2ms
+Iteration 73 completed in 2ms, sliding average: 2ms
+Iteration 74 completed in 1ms, sliding average: 2ms
+Iteration 75 completed in 1ms, sliding average: 2ms
+Iteration 76 completed in 2ms, sliding average: 2ms
+Iteration 77 completed in 2ms, sliding average: 2ms
+Iteration 78 completed in 2ms, sliding average: 2ms
+Iteration 79 completed in 10ms, sliding average: 2ms
+Iteration 80 completed in 2ms, sliding average: 2ms
+Iteration 81 completed in 2ms, sliding average: 2ms
+Iteration 82 completed in 2ms, sliding average: 2ms
+Iteration 83 completed in 1ms, sliding average: 2ms
+Iteration 84 completed in 2ms, sliding average: 2ms
+Iteration 85 completed in 2ms, sliding average: 2ms
+Iteration 86 completed in 2ms, sliding average: 2ms
+Iteration 87 completed in 2ms, sliding average: 2ms
+Iteration 88 completed in 2ms, sliding average: 2ms
+Iteration 89 completed in 1ms, sliding average: 2ms
+Iteration 90 completed in 2ms, sliding average: 2ms
+Iteration 91 completed in 2ms, sliding average: 2ms
+Iteration 92 completed in 3ms, sliding average: 2ms
+Iteration 93 completed in 2ms, sliding average: 2ms
+Iteration 94 completed in 2ms, sliding average: 2ms
+Iteration 95 completed in 3ms, sliding average: 2ms
+Iteration 96 completed in 2ms, sliding average: 2ms
+Iteration 97 completed in 2ms, sliding average: 2ms
+Iteration 98 completed in 2ms, sliding average: 2ms
+Iteration 99 completed in 1ms, sliding average: 2ms
+Iteration 100 completed in 0ms, sliding average: 2ms
+Iteration 101 completed in 2ms, sliding average: 2ms
+Iteration 102 completed in 3ms, sliding average: 2ms
+Iteration 103 completed in 0ms, sliding average: 2ms
+Iteration 104 completed in 2ms, sliding average: 2ms
+Iteration 105 completed in 0ms, sliding average: 2ms
+Iteration 106 completed in 2ms, sliding average: 2ms
+Iteration 107 completed in 2ms, sliding average: 2ms
+Iteration 108 completed in 0ms, sliding average: 2ms
+Iteration 109 completed in 2ms, sliding average: 2ms
+Iteration 110 completed in 2ms, sliding average: 2ms
+Iteration 111 completed in 3ms, sliding average: 2ms
+Iteration 112 completed in 2ms, sliding average: 2ms
+Iteration 113 completed in 2ms, sliding average: 2ms
+Iteration 114 completed in 2ms, sliding average: 2ms
+Iteration 115 completed in 1ms, sliding average: 2ms
+Iteration 116 completed in 2ms, sliding average: 2ms
+Iteration 117 completed in 2ms, sliding average: 2ms
+Iteration 118 completed in 2ms, sliding average: 2ms
+Iteration 119 completed in 3ms, sliding average: 2ms
+Iteration 120 completed in 2ms, sliding average: 2ms
+Iteration 121 completed in 2ms, sliding average: 2ms
+Iteration 122 completed in 2ms, sliding average: 2ms
+Iteration 123 completed in 3ms, sliding average: 2ms
+Iteration 124 completed in 3ms, sliding average: 2ms
+Iteration 125 completed in 2ms, sliding average: 2ms
+Iteration 126 completed in 2ms, sliding average: 2ms
+Iteration 127 completed in 2ms, sliding average: 2ms
+Iteration 128 completed in 9ms, sliding average: 2ms
+Iteration 129 completed in 2ms, sliding average: 2ms
+Iteration 130 completed in 2ms, sliding average: 2ms
+Iteration 131 completed in 2ms, sliding average: 2ms
+Iteration 132 completed in 2ms, sliding average: 2ms
+Iteration 133 completed in 3ms, sliding average: 2ms
+Iteration 134 completed in 2ms, sliding average: 2ms
+Iteration 135 completed in 2ms, sliding average: 2ms
+Iteration 136 completed in 2ms, sliding average: 2ms
+Iteration 137 completed in 2ms, sliding average: 2ms
+Iteration 138 completed in 2ms, sliding average: 2ms
+Iteration 139 completed in 9ms, sliding average: 2ms
+Iteration 140 completed in 1ms, sliding average: 2ms
+Iteration 141 completed in 1ms, sliding average: 2ms
+Iteration 142 completed in 2ms, sliding average: 2ms
+Iteration 143 completed in 2ms, sliding average: 2ms
+Iteration 144 completed in 1ms, sliding average: 2ms
+Iteration 145 completed in 2ms, sliding average: 2ms
+Iteration 146 completed in 2ms, sliding average: 2ms
+Iteration 147 completed in 2ms, sliding average: 2ms
+Iteration 148 completed in 1ms, sliding average: 2ms
+Iteration 149 completed in 2ms, sliding average: 2ms
+Iteration 150 completed in 2ms, sliding average: 2ms
+Iteration 151 completed in 2ms, sliding average: 2ms
+Iteration 152 completed in 1ms, sliding average: 2ms
+Iteration 153 completed in 2ms, sliding average: 2ms
+Iteration 154 completed in 2ms, sliding average: 2ms
+Iteration 155 completed in 2ms, sliding average: 2ms
+Iteration 156 completed in 1ms, sliding average: 2ms
+Iteration 157 completed in 2ms, sliding average: 2ms
+Iteration 158 completed in 2ms, sliding average: 2ms
+Iteration 159 completed in 2ms, sliding average: 2ms
+Iteration 160 completed in 1ms, sliding average: 2ms
+Iteration 161 completed in 2ms, sliding average: 2ms
+Iteration 162 completed in 2ms, sliding average: 2ms
+Iteration 163 completed in 2ms, sliding average: 2ms
+Iteration 164 completed in 4ms, sliding average: 2ms
+Iteration 165 completed in 2ms, sliding average: 2ms
+Iteration 166 completed in 2ms, sliding average: 2ms
+Iteration 167 completed in 1ms, sliding average: 2ms
+Iteration 168 completed in 2ms, sliding average: 2ms
+Iteration 169 completed in 2ms, sliding average: 2ms
+Iteration 170 completed in 1ms, sliding average: 2ms
+Iteration 171 completed in 2ms, sliding average: 2ms
+Iteration 172 completed in 2ms, sliding average: 2ms
+Iteration 173 completed in 2ms, sliding average: 2ms
+Iteration 174 completed in 1ms, sliding average: 2ms
+Iteration 175 completed in 2ms, sliding average: 2ms
+Iteration 176 completed in 2ms, sliding average: 2ms
+Iteration 177 completed in 2ms, sliding average: 2ms
+Iteration 178 completed in 1ms, sliding average: 2ms
+Iteration 179 completed in 2ms, sliding average: 2ms
+Iteration 180 completed in 2ms, sliding average: 2ms
+Iteration 181 completed in 1ms, sliding average: 2ms
+Iteration 182 completed in 1ms, sliding average: 1ms
+Iteration 183 completed in 2ms, sliding average: 2ms
+Iteration 184 completed in 2ms, sliding average: 2ms
+Iteration 185 completed in 1ms, sliding average: 1ms
+Iteration 186 completed in 2ms, sliding average: 1ms
+Iteration 187 completed in 2ms, sliding average: 1ms
+Iteration 188 completed in 2ms, sliding average: 1ms
+Iteration 189 completed in 2ms, sliding average: 2ms
+Iteration 190 completed in 1ms, sliding average: 1ms
+Iteration 191 completed in 1ms, sliding average: 1ms
+Iteration 192 completed in 2ms, sliding average: 1ms
+Iteration 193 completed in 1ms, sliding average: 1ms
+Iteration 194 completed in 1ms, sliding average: 1ms
+Iteration 195 completed in 2ms, sliding average: 1ms
+Iteration 196 completed in 1ms, sliding average: 1ms
+Iteration 197 completed in 1ms, sliding average: 1ms
+Iteration 198 completed in 3ms, sliding average: 1ms
+Iteration 199 completed in 2ms, sliding average: 1ms
+Iteration 200 completed in 1ms, sliding average: 1ms
+Iteration 201 completed in 2ms, sliding average: 1ms
+Iteration 202 completed in 2ms, sliding average: 1ms
+Iteration 203 completed in 1ms, sliding average: 1ms
+Iteration 204 completed in 2ms, sliding average: 1ms
+Iteration 205 completed in 2ms, sliding average: 1ms
+Iteration 206 completed in 1ms, sliding average: 1ms
+Iteration 207 completed in 2ms, sliding average: 1ms
+Iteration 208 completed in 1ms, sliding average: 1ms
+Iteration 209 completed in 1ms, sliding average: 1ms
+Iteration 210 completed in 2ms, sliding average: 1ms
+Iteration 211 completed in 1ms, sliding average: 1ms
+Iteration 212 completed in 1ms, sliding average: 1ms
+Iteration 213 completed in 2ms, sliding average: 1ms
+Iteration 214 completed in 1ms, sliding average: 1ms
+Iteration 215 completed in 2ms, sliding average: 1ms
+Iteration 216 completed in 2ms, sliding average: 1ms
+Iteration 217 completed in 1ms, sliding average: 1ms
+Iteration 218 completed in 2ms, sliding average: 1ms
+Iteration 219 completed in 2ms, sliding average: 1ms
+Iteration 220 completed in 1ms, sliding average: 1ms
+Iteration 221 completed in 2ms, sliding average: 1ms
+Iteration 222 completed in 2ms, sliding average: 1ms
+Iteration 223 completed in 1ms, sliding average: 1ms
+Iteration 224 completed in 2ms, sliding average: 1ms
+Iteration 225 completed in 2ms, sliding average: 1ms
+Iteration 226 completed in 1ms, sliding average: 1ms
+Iteration 227 completed in 2ms, sliding average: 1ms
+Iteration 228 completed in 2ms, sliding average: 1ms
+Iteration 229 completed in 1ms, sliding average: 1ms
+Iteration 230 completed in 2ms, sliding average: 1ms
+Iteration 231 completed in 2ms, sliding average: 1ms
+Iteration 232 completed in 2ms, sliding average: 1ms
+Iteration 233 completed in 1ms, sliding average: 1ms
+Iteration 234 completed in 2ms, sliding average: 1ms
+Iteration 235 completed in 2ms, sliding average: 1ms
+Iteration 236 completed in 2ms, sliding average: 1ms
+Iteration 237 completed in 1ms, sliding average: 1ms
+Iteration 238 completed in 2ms, sliding average: 1ms
+Iteration 239 completed in 2ms, sliding average: 1ms
+Iteration 240 completed in 2ms, sliding average: 1ms
+Iteration 241 completed in 2ms, sliding average: 1ms
+Iteration 242 completed in 1ms, sliding average: 1ms
+Iteration 243 completed in 2ms, sliding average: 1ms
+Iteration 244 completed in 2ms, sliding average: 1ms
+Iteration 245 completed in 1ms, sliding average: 1ms
+Iteration 246 completed in 2ms, sliding average: 1ms
+Iteration 247 completed in 2ms, sliding average: 1ms
+Iteration 248 completed in 2ms, sliding average: 1ms
+Iteration 249 completed in 2ms, sliding average: 1ms
+Iteration 250 completed in 1ms, sliding average: 1ms
+Iteration 251 completed in 2ms, sliding average: 1ms
+Iteration 252 completed in 2ms, sliding average: 1ms
+Iteration 253 completed in 1ms, sliding average: 1ms
+Iteration 254 completed in 2ms, sliding average: 1ms
+Iteration 255 completed in 2ms, sliding average: 1ms
+Iteration 256 completed in 2ms, sliding average: 1ms
+Iteration 257 completed in 2ms, sliding average: 1ms
+Iteration 258 completed in 2ms, sliding average: 1ms
+Iteration 259 completed in 2ms, sliding average: 1ms
+Iteration 260 completed in 1ms, sliding average: 1ms
+Iteration 261 completed in 3ms, sliding average: 1ms
+Iteration 262 completed in 2ms, sliding average: 1ms
+Iteration 263 completed in 1ms, sliding average: 1ms
+Iteration 264 completed in 2ms, sliding average: 1ms
+Iteration 265 completed in 2ms, sliding average: 1ms
+Iteration 266 completed in 5ms, sliding average: 1ms
+Iteration 267 completed in 3ms, sliding average: 1ms
+Iteration 268 completed in 3ms, sliding average: 1ms
+Iteration 269 completed in 2ms, sliding average: 1ms
+Iteration 270 completed in 2ms, sliding average: 1ms
+Iteration 271 completed in 1ms, sliding average: 1ms
+Iteration 272 completed in 2ms, sliding average: 1ms
+Iteration 273 completed in 3ms, sliding average: 1ms
+Iteration 274 completed in 2ms, sliding average: 1ms
+Iteration 275 completed in 1ms, sliding average: 1ms
+Iteration 276 completed in 2ms, sliding average: 1ms
+Iteration 277 completed in 3ms, sliding average: 1ms
+Iteration 278 completed in 1ms, sliding average: 1ms
+Iteration 279 completed in 3ms, sliding average: 1ms
+Iteration 280 completed in 3ms, sliding average: 1ms
+Iteration 281 completed in 2ms, sliding average: 1ms
+Iteration 282 completed in 1ms, sliding average: 1ms
+Iteration 283 completed in 2ms, sliding average: 1ms
+Iteration 284 completed in 2ms, sliding average: 1ms
+Iteration 285 completed in 2ms, sliding average: 1ms
+Iteration 286 completed in 1ms, sliding average: 1ms
+Iteration 287 completed in 2ms, sliding average: 1ms
+Iteration 288 completed in 2ms, sliding average: 1ms
+Iteration 289 completed in 2ms, sliding average: 1ms
+Iteration 290 completed in 1ms, sliding average: 1ms
+Iteration 291 completed in 3ms, sliding average: 1ms
+Iteration 292 completed in 3ms, sliding average: 1ms
+Iteration 293 completed in 1ms, sliding average: 1ms
+Iteration 294 completed in 3ms, sliding average: 1ms
+Iteration 295 completed in 2ms, sliding average: 1ms
+Iteration 296 completed in 2ms, sliding average: 1ms
+Iteration 297 completed in 2ms, sliding average: 1ms
+Iteration 298 completed in 2ms, sliding average: 1ms
+Iteration 299 completed in 2ms, sliding average: 1ms
+Iteration 300 completed in 1ms, sliding average: 1ms
+Iteration 301 completed in 2ms, sliding average: 1ms
+Iteration 302 completed in 2ms, sliding average: 1ms
+Iteration 303 completed in 106ms, sliding average: 2ms
+Iteration 304 completed in 7ms, sliding average: 2ms
+Iteration 305 completed in 8ms, sliding average: 3ms
+Iteration 306 completed in 6ms, sliding average: 3ms
+Iteration 307 completed in 6ms, sliding average: 3ms
+Iteration 308 completed in 6ms, sliding average: 3ms
+Iteration 309 completed in 6ms, sliding average: 3ms
+Iteration 310 completed in 7ms, sliding average: 3ms
+Iteration 311 completed in 3ms, sliding average: 3ms
+Iteration 312 completed in 3ms, sliding average: 3ms
+Iteration 313 completed in 3ms, sliding average: 3ms
+Iteration 314 completed in 3ms, sliding average: 3ms
+Iteration 315 completed in 3ms, sliding average: 3ms
+Iteration 316 completed in 5ms, sliding average: 3ms
+Iteration 317 completed in 3ms, sliding average: 3ms
+Iteration 318 completed in 3ms, sliding average: 3ms
+Iteration 319 completed in 3ms, sliding average: 3ms
+Iteration 320 completed in 2ms, sliding average: 3ms
+Iteration 321 completed in 2ms, sliding average: 3ms
+Iteration 322 completed in 2ms, sliding average: 3ms
+Iteration 323 completed in 2ms, sliding average: 3ms
+Iteration 324 completed in 2ms, sliding average: 3ms
+Iteration 325 completed in 4ms, sliding average: 3ms
+Iteration 326 completed in 4ms, sliding average: 3ms
+Iteration 327 completed in 3ms, sliding average: 3ms
+Iteration 328 completed in 3ms, sliding average: 3ms
+Iteration 329 completed in 2ms, sliding average: 3ms
+Iteration 330 completed in 3ms, sliding average: 3ms
+Iteration 331 completed in 2ms, sliding average: 3ms
+Iteration 332 completed in 2ms, sliding average: 3ms
+Iteration 333 completed in 3ms, sliding average: 3ms
+Iteration 334 completed in 2ms, sliding average: 3ms
+Iteration 335 completed in 2ms, sliding average: 3ms
+Iteration 336 completed in 2ms, sliding average: 3ms
+Iteration 337 completed in 2ms, sliding average: 3ms
+Iteration 338 completed in 2ms, sliding average: 3ms
+Iteration 339 completed in 2ms, sliding average: 3ms
+Iteration 340 completed in 2ms, sliding average: 3ms
+Iteration 341 completed in 2ms, sliding average: 3ms
+Iteration 342 completed in 1ms, sliding average: 3ms
+Iteration 343 completed in 2ms, sliding average: 3ms
+Iteration 344 completed in 2ms, sliding average: 3ms
+Iteration 345 completed in 2ms, sliding average: 3ms
+Iteration 346 completed in 2ms, sliding average: 3ms
+Iteration 347 completed in 1ms, sliding average: 3ms
+Iteration 348 completed in 2ms, sliding average: 3ms
+Iteration 349 completed in 2ms, sliding average: 3ms
+Iteration 350 completed in 2ms, sliding average: 3ms
+Iteration 351 completed in 2ms, sliding average: 3ms
+Iteration 352 completed in 1ms, sliding average: 3ms
+Iteration 353 completed in 2ms, sliding average: 3ms
+Iteration 354 completed in 2ms, sliding average: 3ms
+Iteration 355 completed in 2ms, sliding average: 3ms
+Iteration 356 completed in 2ms, sliding average: 3ms
+Iteration 357 completed in 2ms, sliding average: 3ms
+Iteration 358 completed in 1ms, sliding average: 3ms
+Iteration 359 completed in 2ms, sliding average: 3ms
+Iteration 360 completed in 2ms, sliding average: 3ms
+Iteration 361 completed in 2ms, sliding average: 3ms
+Iteration 362 completed in 2ms, sliding average: 3ms
+Iteration 363 completed in 2ms, sliding average: 3ms
+Iteration 364 completed in 1ms, sliding average: 3ms
+Iteration 365 completed in 2ms, sliding average: 3ms
+Iteration 366 completed in 2ms, sliding average: 3ms
+Iteration 367 completed in 2ms, sliding average: 3ms
+Iteration 368 completed in 2ms, sliding average: 3ms
+Iteration 369 completed in 1ms, sliding average: 3ms
+Iteration 370 completed in 2ms, sliding average: 3ms
+Iteration 371 completed in 2ms, sliding average: 3ms
+Iteration 372 completed in 2ms, sliding average: 3ms
+Iteration 373 completed in 2ms, sliding average: 3ms
+Iteration 374 completed in 2ms, sliding average: 3ms
+Iteration 375 completed in 1ms, sliding average: 3ms
+Iteration 376 completed in 2ms, sliding average: 3ms
+Iteration 377 completed in 2ms, sliding average: 3ms
+Iteration 378 completed in 2ms, sliding average: 3ms
+Iteration 379 completed in 2ms, sliding average: 3ms
+Iteration 380 completed in 1ms, sliding average: 3ms
+Iteration 381 completed in 2ms, sliding average: 3ms
+Iteration 382 completed in 2ms, sliding average: 3ms
+Iteration 383 completed in 2ms, sliding average: 3ms
+Iteration 384 completed in 3ms, sliding average: 3ms
+Iteration 385 completed in 2ms, sliding average: 3ms
+Iteration 386 completed in 2ms, sliding average: 3ms
+Iteration 387 completed in 2ms, sliding average: 3ms
+Iteration 388 completed in 1ms, sliding average: 3ms
+Iteration 389 completed in 2ms, sliding average: 3ms
+Iteration 390 completed in 2ms, sliding average: 3ms
+Iteration 391 completed in 2ms, sliding average: 3ms
+Iteration 392 completed in 2ms, sliding average: 3ms
+Iteration 393 completed in 1ms, sliding average: 3ms
+Iteration 394 completed in 2ms, sliding average: 3ms
+Iteration 395 completed in 2ms, sliding average: 3ms
+Iteration 396 completed in 2ms, sliding average: 3ms
+Iteration 397 completed in 1ms, sliding average: 3ms
+Iteration 398 completed in 2ms, sliding average: 3ms
+Iteration 399 completed in 2ms, sliding average: 3ms
+Iteration 400 completed in 2ms, sliding average: 3ms
+Iteration 401 completed in 1ms, sliding average: 3ms
+Iteration 402 completed in 1ms, sliding average: 3ms
+Iteration 403 completed in 2ms, sliding average: 2ms
+Iteration 404 completed in 2ms, sliding average: 2ms
+Iteration 405 completed in 2ms, sliding average: 2ms
+Iteration 406 completed in 1ms, sliding average: 2ms
+Iteration 407 completed in 1ms, sliding average: 2ms
+Iteration 408 completed in 2ms, sliding average: 2ms
+Iteration 409 completed in 2ms, sliding average: 2ms
+Iteration 410 completed in 2ms, sliding average: 2ms
+Iteration 411 completed in 2ms, sliding average: 2ms
+Iteration 412 completed in 1ms, sliding average: 2ms
+Iteration 413 completed in 2ms, sliding average: 2ms
+Iteration 414 completed in 2ms, sliding average: 2ms
+Iteration 415 completed in 2ms, sliding average: 1ms
+Iteration 416 completed in 2ms, sliding average: 1ms
+Iteration 417 completed in 1ms, sliding average: 1ms
+Iteration 418 completed in 2ms, sliding average: 1ms
+Iteration 419 completed in 2ms, sliding average: 1ms
+Iteration 420 completed in 2ms, sliding average: 1ms
+Iteration 421 completed in 2ms, sliding average: 1ms
+Iteration 422 completed in 1ms, sliding average: 1ms
+Iteration 423 completed in 1ms, sliding average: 1ms
+Iteration 424 completed in 2ms, sliding average: 1ms
+Iteration 425 completed in 2ms, sliding average: 1ms
+Iteration 426 completed in 2ms, sliding average: 1ms
+Iteration 427 completed in 1ms, sliding average: 1ms
+Iteration 428 completed in 2ms, sliding average: 1ms
+Iteration 429 completed in 2ms, sliding average: 1ms
+Iteration 430 completed in 2ms, sliding average: 1ms
+Iteration 431 completed in 2ms, sliding average: 1ms
+Iteration 432 completed in 1ms, sliding average: 1ms
+Iteration 433 completed in 2ms, sliding average: 1ms
+Iteration 434 completed in 2ms, sliding average: 1ms
+Iteration 435 completed in 2ms, sliding average: 1ms
+Iteration 436 completed in 1ms, sliding average: 1ms
+Iteration 437 completed in 1ms, sliding average: 1ms
+Iteration 438 completed in 2ms, sliding average: 1ms
+Iteration 439 completed in 2ms, sliding average: 1ms
+Iteration 440 completed in 2ms, sliding average: 1ms
+Iteration 441 completed in 1ms, sliding average: 1ms
+Iteration 442 completed in 2ms, sliding average: 1ms
+Iteration 443 completed in 2ms, sliding average: 1ms
+Iteration 444 completed in 2ms, sliding average: 1ms
+Iteration 445 completed in 2ms, sliding average: 1ms
+Iteration 446 completed in 1ms, sliding average: 1ms
+Iteration 447 completed in 2ms, sliding average: 1ms
+Iteration 448 completed in 2ms, sliding average: 1ms
+Iteration 449 completed in 2ms, sliding average: 1ms
+Iteration 450 completed in 1ms, sliding average: 1ms
+Iteration 451 completed in 2ms, sliding average: 1ms
+Iteration 452 completed in 2ms, sliding average: 1ms
+Iteration 453 completed in 2ms, sliding average: 1ms
+Iteration 454 completed in 1ms, sliding average: 1ms
+Iteration 455 completed in 2ms, sliding average: 1ms
+Iteration 456 completed in 2ms, sliding average: 1ms
+Iteration 457 completed in 2ms, sliding average: 1ms
+Iteration 458 completed in 1ms, sliding average: 1ms
+Iteration 459 completed in 2ms, sliding average: 1ms
+Iteration 460 completed in 2ms, sliding average: 1ms
+Iteration 461 completed in 2ms, sliding average: 1ms
+Iteration 462 completed in 2ms, sliding average: 1ms
+Iteration 463 completed in 1ms, sliding average: 1ms
+Iteration 464 completed in 2ms, sliding average: 1ms
+Iteration 465 completed in 2ms, sliding average: 1ms
+Iteration 466 completed in 2ms, sliding average: 1ms
+Iteration 467 completed in 2ms, sliding average: 1ms
+Iteration 468 completed in 2ms, sliding average: 1ms
+Iteration 469 completed in 2ms, sliding average: 1ms
+Iteration 470 completed in 1ms, sliding average: 1ms
+Iteration 471 completed in 2ms, sliding average: 1ms
+Iteration 472 completed in 2ms, sliding average: 1ms
+Iteration 473 completed in 2ms, sliding average: 1ms
+Iteration 474 completed in 13ms, sliding average: 1ms
+Iteration 475 completed in 2ms, sliding average: 1ms
+Iteration 476 completed in 1ms, sliding average: 1ms
+Iteration 477 completed in 2ms, sliding average: 1ms
+Iteration 478 completed in 2ms, sliding average: 1ms
+Iteration 479 completed in 1ms, sliding average: 1ms
+Iteration 480 completed in 2ms, sliding average: 1ms
+Iteration 481 completed in 2ms, sliding average: 1ms
+Iteration 482 completed in 1ms, sliding average: 1ms
+Iteration 483 completed in 2ms, sliding average: 1ms
+Iteration 484 completed in 2ms, sliding average: 1ms
+Iteration 485 completed in 2ms, sliding average: 1ms
+Iteration 486 completed in 1ms, sliding average: 1ms
+Iteration 487 completed in 2ms, sliding average: 1ms
+Iteration 488 completed in 2ms, sliding average: 1ms
+Iteration 489 completed in 1ms, sliding average: 1ms
+Iteration 490 completed in 2ms, sliding average: 1ms
+Iteration 491 completed in 2ms, sliding average: 1ms
+Iteration 492 completed in 2ms, sliding average: 1ms
+Iteration 493 completed in 1ms, sliding average: 1ms
+Iteration 494 completed in 2ms, sliding average: 1ms
+Iteration 495 completed in 2ms, sliding average: 1ms
+Iteration 496 completed in 1ms, sliding average: 1ms
+Iteration 497 completed in 2ms, sliding average: 1ms
+Iteration 498 completed in 2ms, sliding average: 1ms
+Iteration 499 completed in 1ms, sliding average: 1ms
+Iteration 500 completed in 2ms, sliding average: 1ms
+Iteration 501 completed in 2ms, sliding average: 1ms
+Iteration 502 completed in 1ms, sliding average: 1ms
+Iteration 503 completed in 2ms, sliding average: 1ms
+Iteration 504 completed in 2ms, sliding average: 1ms
+Iteration 505 completed in 1ms, sliding average: 1ms
+Iteration 506 completed in 1ms, sliding average: 1ms
+Iteration 507 completed in 2ms, sliding average: 1ms
+Iteration 508 completed in 2ms, sliding average: 1ms
+Iteration 509 completed in 1ms, sliding average: 1ms
+Iteration 510 completed in 2ms, sliding average: 1ms
+Iteration 511 completed in 2ms, sliding average: 1ms
+Iteration 512 completed in 1ms, sliding average: 1ms
+Iteration 513 completed in 2ms, sliding average: 1ms
+Iteration 514 completed in 2ms, sliding average: 1ms
+Iteration 515 completed in 1ms, sliding average: 1ms
+Iteration 516 completed in 2ms, sliding average: 1ms
+Iteration 517 completed in 2ms, sliding average: 1ms
+Iteration 518 completed in 1ms, sliding average: 1ms
+Iteration 519 completed in 2ms, sliding average: 1ms
+Iteration 520 completed in 2ms, sliding average: 1ms
+Iteration 521 completed in 2ms, sliding average: 1ms
+Iteration 522 completed in 1ms, sliding average: 1ms
+Iteration 523 completed in 2ms, sliding average: 1ms
+Iteration 524 completed in 2ms, sliding average: 1ms
+Iteration 525 completed in 1ms, sliding average: 1ms
+Iteration 526 completed in 2ms, sliding average: 1ms
+Iteration 527 completed in 2ms, sliding average: 1ms
+Iteration 528 completed in 1ms, sliding average: 1ms
+Iteration 529 completed in 2ms, sliding average: 1ms
+Iteration 530 completed in 2ms, sliding average: 1ms
+Iteration 531 completed in 1ms, sliding average: 1ms
+Iteration 532 completed in 2ms, sliding average: 1ms
+Iteration 533 completed in 2ms, sliding average: 1ms
+Iteration 534 completed in 1ms, sliding average: 1ms
+Iteration 535 completed in 2ms, sliding average: 1ms
+Iteration 536 completed in 2ms, sliding average: 1ms
+Iteration 537 completed in 1ms, sliding average: 1ms
+Iteration 538 completed in 2ms, sliding average: 1ms
+Iteration 539 completed in 2ms, sliding average: 1ms
+Iteration 540 completed in 1ms, sliding average: 1ms
+Iteration 541 completed in 2ms, sliding average: 1ms
+Iteration 542 completed in 2ms, sliding average: 1ms
+Iteration 543 completed in 1ms, sliding average: 1ms
+Iteration 544 completed in 2ms, sliding average: 1ms
+Iteration 545 completed in 2ms, sliding average: 1ms
+Iteration 546 completed in 1ms, sliding average: 1ms
+Iteration 547 completed in 2ms, sliding average: 1ms
+Iteration 548 completed in 2ms, sliding average: 1ms
+Iteration 549 completed in 1ms, sliding average: 1ms
+Iteration 550 completed in 2ms, sliding average: 1ms
+Iteration 551 completed in 2ms, sliding average: 1ms
+Iteration 552 completed in 2ms, sliding average: 1ms
+Iteration 553 completed in 2ms, sliding average: 1ms
+Iteration 554 completed in 1ms, sliding average: 1ms
+Iteration 555 completed in 2ms, sliding average: 1ms
+Iteration 556 completed in 2ms, sliding average: 1ms
+Iteration 557 completed in 1ms, sliding average: 1ms
+Iteration 558 completed in 2ms, sliding average: 1ms
+Iteration 559 completed in 2ms, sliding average: 1ms
+Iteration 560 completed in 2ms, sliding average: 1ms
+Iteration 561 completed in 1ms, sliding average: 1ms
+Iteration 562 completed in 2ms, sliding average: 1ms
+Iteration 563 completed in 2ms, sliding average: 1ms
+Iteration 564 completed in 1ms, sliding average: 1ms
+Iteration 565 completed in 2ms, sliding average: 1ms
+Iteration 566 completed in 2ms, sliding average: 1ms
+Iteration 567 completed in 1ms, sliding average: 1ms
+Iteration 568 completed in 2ms, sliding average: 1ms
+Iteration 569 completed in 2ms, sliding average: 1ms
+Iteration 570 completed in 2ms, sliding average: 1ms
+Iteration 571 completed in 1ms, sliding average: 1ms
+Iteration 572 completed in 2ms, sliding average: 1ms
+Iteration 573 completed in 2ms, sliding average: 1ms
+Iteration 574 completed in 1ms, sliding average: 1ms
+Iteration 575 completed in 2ms, sliding average: 1ms
+Iteration 576 completed in 2ms, sliding average: 1ms
+Iteration 577 completed in 2ms, sliding average: 1ms
+Iteration 578 completed in 1ms, sliding average: 1ms
+Iteration 579 completed in 2ms, sliding average: 1ms
+Iteration 580 completed in 2ms, sliding average: 1ms
+Iteration 581 completed in 1ms, sliding average: 1ms
+Iteration 582 completed in 2ms, sliding average: 1ms
+Iteration 583 completed in 2ms, sliding average: 1ms
+Iteration 584 completed in 2ms, sliding average: 1ms
+Iteration 585 completed in 1ms, sliding average: 1ms
+Iteration 586 completed in 2ms, sliding average: 1ms
+Iteration 587 completed in 2ms, sliding average: 1ms
+Iteration 588 completed in 1ms, sliding average: 1ms
+Iteration 589 completed in 2ms, sliding average: 1ms
+Iteration 590 completed in 2ms, sliding average: 1ms
+Iteration 591 completed in 1ms, sliding average: 1ms
+Iteration 592 completed in 2ms, sliding average: 1ms
+Iteration 593 completed in 2ms, sliding average: 1ms
+Iteration 594 completed in 2ms, sliding average: 1ms
+Iteration 595 completed in 1ms, sliding average: 1ms
+Iteration 596 completed in 2ms, sliding average: 1ms
+Iteration 597 completed in 2ms, sliding average: 1ms
+Iteration 598 completed in 2ms, sliding average: 1ms
+Iteration 599 completed in 1ms, sliding average: 1ms
+Iteration 600 completed in 2ms, sliding average: 1ms
+Iteration 601 completed in 2ms, sliding average: 1ms
+Iteration 602 completed in 1ms, sliding average: 1ms
+Iteration 603 completed in 2ms, sliding average: 1ms
+Iteration 604 completed in 2ms, sliding average: 1ms
+Iteration 605 completed in 2ms, sliding average: 1ms
+Iteration 606 completed in 1ms, sliding average: 1ms
+Iteration 607 completed in 2ms, sliding average: 1ms
+Iteration 608 completed in 2ms, sliding average: 1ms
+Iteration 609 completed in 1ms, sliding average: 1ms
+Iteration 610 completed in 2ms, sliding average: 1ms
+Iteration 611 completed in 2ms, sliding average: 1ms
+Iteration 612 completed in 2ms, sliding average: 1ms
+Iteration 613 completed in 1ms, sliding average: 1ms
+Iteration 614 completed in 2ms, sliding average: 1ms
+Iteration 615 completed in 2ms, sliding average: 1ms
+Iteration 616 completed in 1ms, sliding average: 1ms
+Iteration 617 completed in 2ms, sliding average: 1ms
+Iteration 618 completed in 2ms, sliding average: 1ms
+Iteration 619 completed in 2ms, sliding average: 1ms
+Iteration 620 completed in 1ms, sliding average: 1ms
+Iteration 621 completed in 2ms, sliding average: 1ms
+Iteration 622 completed in 1ms, sliding average: 1ms
+Iteration 623 completed in 1ms, sliding average: 1ms
+Iteration 624 completed in 2ms, sliding average: 1ms
+Iteration 625 completed in 2ms, sliding average: 1ms
+Iteration 626 completed in 1ms, sliding average: 1ms
+Iteration 627 completed in 2ms, sliding average: 1ms
+Iteration 628 completed in 2ms, sliding average: 1ms
+Iteration 629 completed in 1ms, sliding average: 1ms
+Iteration 630 completed in 2ms, sliding average: 1ms
+Iteration 631 completed in 2ms, sliding average: 1ms
+Iteration 632 completed in 2ms, sliding average: 1ms
+Iteration 633 completed in 1ms, sliding average: 1ms
+Iteration 634 completed in 2ms, sliding average: 1ms
+Iteration 635 completed in 2ms, sliding average: 1ms
+Iteration 636 completed in 1ms, sliding average: 1ms
+Iteration 637 completed in 2ms, sliding average: 1ms
+Iteration 638 completed in 2ms, sliding average: 1ms
+Iteration 639 completed in 2ms, sliding average: 1ms
+Iteration 640 completed in 1ms, sliding average: 1ms
+Iteration 641 completed in 2ms, sliding average: 1ms
+Iteration 642 completed in 2ms, sliding average: 1ms
+Iteration 643 completed in 1ms, sliding average: 1ms
+Iteration 644 completed in 2ms, sliding average: 1ms
+Iteration 645 completed in 2ms, sliding average: 1ms
+Iteration 646 completed in 2ms, sliding average: 1ms
+Iteration 647 completed in 1ms, sliding average: 1ms
+Iteration 648 completed in 2ms, sliding average: 1ms
+Iteration 649 completed in 2ms, sliding average: 1ms
+Iteration 650 completed in 1ms, sliding average: 1ms
+Iteration 651 completed in 2ms, sliding average: 1ms
+Iteration 652 completed in 2ms, sliding average: 1ms
+Iteration 653 completed in 1ms, sliding average: 1ms
+Iteration 654 completed in 1ms, sliding average: 1ms
+Iteration 655 completed in 2ms, sliding average: 1ms
+Iteration 656 completed in 2ms, sliding average: 1ms
+Iteration 657 completed in 1ms, sliding average: 1ms
+Iteration 658 completed in 2ms, sliding average: 1ms
+Iteration 659 completed in 2ms, sliding average: 1ms
+Iteration 660 completed in 1ms, sliding average: 1ms
+Iteration 661 completed in 2ms, sliding average: 1ms
+Iteration 662 completed in 2ms, sliding average: 1ms
+Iteration 663 completed in 2ms, sliding average: 1ms
+Iteration 664 completed in 1ms, sliding average: 1ms
+Iteration 665 completed in 2ms, sliding average: 1ms
+Iteration 666 completed in 2ms, sliding average: 1ms
+Iteration 667 completed in 2ms, sliding average: 1ms
+Iteration 668 completed in 1ms, sliding average: 1ms
+Iteration 669 completed in 2ms, sliding average: 1ms
+Iteration 670 completed in 2ms, sliding average: 1ms
+Iteration 671 completed in 1ms, sliding average: 1ms
+Iteration 672 completed in 2ms, sliding average: 1ms
+Iteration 673 completed in 2ms, sliding average: 1ms
+Iteration 674 completed in 1ms, sliding average: 1ms
+Iteration 675 completed in 2ms, sliding average: 1ms
+Iteration 676 completed in 2ms, sliding average: 1ms
+Iteration 677 completed in 2ms, sliding average: 1ms
+Iteration 678 completed in 1ms, sliding average: 1ms
+Iteration 679 completed in 2ms, sliding average: 1ms
+Iteration 680 completed in 2ms, sliding average: 1ms
+Iteration 681 completed in 1ms, sliding average: 1ms
+Iteration 682 completed in 2ms, sliding average: 1ms
+Iteration 683 completed in 2ms, sliding average: 1ms
+Iteration 684 completed in 2ms, sliding average: 1ms
+Iteration 685 completed in 1ms, sliding average: 1ms
+Iteration 686 completed in 2ms, sliding average: 1ms
+Iteration 687 completed in 2ms, sliding average: 1ms
+Iteration 688 completed in 1ms, sliding average: 1ms
+Iteration 689 completed in 2ms, sliding average: 1ms
+Iteration 690 completed in 2ms, sliding average: 1ms
+Iteration 691 completed in 2ms, sliding average: 1ms
+Iteration 692 completed in 1ms, sliding average: 1ms
+Iteration 693 completed in 2ms, sliding average: 1ms
+Iteration 694 completed in 2ms, sliding average: 1ms
+Iteration 695 completed in 1ms, sliding average: 1ms
+Iteration 696 completed in 2ms, sliding average: 1ms
+Iteration 697 completed in 2ms, sliding average: 1ms
+Iteration 698 completed in 2ms, sliding average: 1ms
+Iteration 699 completed in 1ms, sliding average: 1ms
+Iteration 700 completed in 2ms, sliding average: 1ms
+Iteration 701 completed in 2ms, sliding average: 1ms
+Iteration 702 completed in 1ms, sliding average: 1ms
+Iteration 703 completed in 2ms, sliding average: 1ms
+Iteration 704 completed in 2ms, sliding average: 1ms
+Iteration 705 completed in 2ms, sliding average: 1ms
+Iteration 706 completed in 1ms, sliding average: 1ms
+Iteration 707 completed in 2ms, sliding average: 1ms
+Iteration 708 completed in 2ms, sliding average: 1ms
+Iteration 709 completed in 1ms, sliding average: 1ms
+Iteration 710 completed in 2ms, sliding average: 1ms
+Iteration 711 completed in 2ms, sliding average: 1ms
+Iteration 712 completed in 1ms, sliding average: 1ms
+Iteration 713 completed in 2ms, sliding average: 1ms
+Iteration 714 completed in 2ms, sliding average: 1ms
+Iteration 715 completed in 1ms, sliding average: 1ms
+Iteration 716 completed in 2ms, sliding average: 1ms
+Iteration 717 completed in 2ms, sliding average: 1ms
+Iteration 718 completed in 1ms, sliding average: 1ms
+Iteration 719 completed in 2ms, sliding average: 1ms
+Iteration 720 completed in 2ms, sliding average: 1ms
+Iteration 721 completed in 2ms, sliding average: 1ms
+Iteration 722 completed in 1ms, sliding average: 1ms
+Iteration 723 completed in 2ms, sliding average: 1ms
+Iteration 724 completed in 2ms, sliding average: 1ms
+Iteration 725 completed in 1ms, sliding average: 1ms
+Iteration 726 completed in 2ms, sliding average: 1ms
+Iteration 727 completed in 2ms, sliding average: 1ms
+Iteration 728 completed in 1ms, sliding average: 1ms
+Iteration 729 completed in 2ms, sliding average: 1ms
+Iteration 730 completed in 2ms, sliding average: 1ms
+Iteration 731 completed in 1ms, sliding average: 1ms
+Iteration 732 completed in 2ms, sliding average: 1ms
+Iteration 733 completed in 2ms, sliding average: 1ms
+Iteration 734 completed in 1ms, sliding average: 1ms
+Iteration 735 completed in 2ms, sliding average: 1ms
+Iteration 736 completed in 2ms, sliding average: 1ms
+Iteration 737 completed in 1ms, sliding average: 1ms
+Iteration 738 completed in 2ms, sliding average: 1ms
+Iteration 739 completed in 2ms, sliding average: 1ms
+Iteration 740 completed in 1ms, sliding average: 1ms
+Iteration 741 completed in 2ms, sliding average: 1ms
+Iteration 742 completed in 2ms, sliding average: 1ms
+Iteration 743 completed in 1ms, sliding average: 1ms
+Iteration 744 completed in 2ms, sliding average: 1ms
+Iteration 745 completed in 2ms, sliding average: 1ms
+Iteration 746 completed in 1ms, sliding average: 1ms
+Iteration 747 completed in 2ms, sliding average: 1ms
+Iteration 748 completed in 2ms, sliding average: 1ms
+Iteration 749 completed in 1ms, sliding average: 1ms
+Iteration 750 completed in 2ms, sliding average: 1ms
+Iteration 751 completed in 2ms, sliding average: 1ms
+Iteration 752 completed in 1ms, sliding average: 1ms
+Iteration 753 completed in 2ms, sliding average: 1ms
+Iteration 754 completed in 2ms, sliding average: 1ms
+Iteration 755 completed in 2ms, sliding average: 1ms
+Iteration 756 completed in 1ms, sliding average: 1ms
+Iteration 757 completed in 2ms, sliding average: 1ms
+Iteration 758 completed in 2ms, sliding average: 1ms
+Iteration 759 completed in 1ms, sliding average: 1ms
+Iteration 760 completed in 2ms, sliding average: 1ms
+Iteration 761 completed in 2ms, sliding average: 1ms
+Iteration 762 completed in 2ms, sliding average: 1ms
+Iteration 763 completed in 2ms, sliding average: 1ms
+Iteration 764 completed in 1ms, sliding average: 1ms
+Iteration 765 completed in 2ms, sliding average: 1ms
+Iteration 766 completed in 2ms, sliding average: 1ms
+Iteration 767 completed in 1ms, sliding average: 1ms
+Iteration 768 completed in 2ms, sliding average: 1ms
+Iteration 769 completed in 2ms, sliding average: 1ms
+Iteration 770 completed in 1ms, sliding average: 1ms
+Iteration 771 completed in 2ms, sliding average: 1ms
+Iteration 772 completed in 2ms, sliding average: 1ms
+Iteration 773 completed in 1ms, sliding average: 1ms
+Iteration 774 completed in 2ms, sliding average: 1ms
+Iteration 775 completed in 2ms, sliding average: 1ms
+Iteration 776 completed in 2ms, sliding average: 1ms
+Iteration 777 completed in 2ms, sliding average: 1ms
+Iteration 778 completed in 1ms, sliding average: 1ms
+Iteration 779 completed in 2ms, sliding average: 1ms
+Iteration 780 completed in 2ms, sliding average: 1ms
+Iteration 781 completed in 1ms, sliding average: 1ms
+Iteration 782 completed in 2ms, sliding average: 1ms
+Iteration 783 completed in 2ms, sliding average: 1ms
+Iteration 784 completed in 1ms, sliding average: 1ms
+Iteration 785 completed in 2ms, sliding average: 1ms
+Iteration 786 completed in 2ms, sliding average: 1ms
+Iteration 787 completed in 1ms, sliding average: 1ms
+Iteration 788 completed in 2ms, sliding average: 1ms
+Iteration 789 completed in 2ms, sliding average: 1ms
+Iteration 790 completed in 1ms, sliding average: 1ms
+Iteration 791 completed in 2ms, sliding average: 1ms
+Iteration 792 completed in 1ms, sliding average: 1ms
+Iteration 793 completed in 2ms, sliding average: 1ms
+Iteration 794 completed in 2ms, sliding average: 1ms
+Iteration 795 completed in 1ms, sliding average: 1ms
+Iteration 796 completed in 2ms, sliding average: 1ms
+Iteration 797 completed in 1ms, sliding average: 1ms
+Iteration 798 completed in 1ms, sliding average: 1ms
+Iteration 799 completed in 2ms, sliding average: 1ms
+Iteration 800 completed in 1ms, sliding average: 1ms
+Iteration 801 completed in 2ms, sliding average: 1ms
+Iteration 802 completed in 2ms, sliding average: 1ms
+Iteration 803 completed in 1ms, sliding average: 1ms
+Iteration 804 completed in 2ms, sliding average: 1ms
+Iteration 805 completed in 2ms, sliding average: 1ms
+Iteration 806 completed in 1ms, sliding average: 1ms
+Iteration 807 completed in 2ms, sliding average: 1ms
+Iteration 808 completed in 2ms, sliding average: 1ms
+Iteration 809 completed in 1ms, sliding average: 1ms
+Iteration 810 completed in 2ms, sliding average: 1ms
+Iteration 811 completed in 1ms, sliding average: 1ms
+Iteration 812 completed in 2ms, sliding average: 1ms
+Iteration 813 completed in 2ms, sliding average: 1ms
+Iteration 814 completed in 1ms, sliding average: 1ms
+Iteration 815 completed in 2ms, sliding average: 1ms
+Iteration 816 completed in 2ms, sliding average: 1ms
+Iteration 817 completed in 1ms, sliding average: 1ms
+Iteration 818 completed in 2ms, sliding average: 1ms
+Iteration 819 completed in 1ms, sliding average: 1ms
+Iteration 820 completed in 2ms, sliding average: 1ms
+Iteration 821 completed in 2ms, sliding average: 1ms
+Iteration 822 completed in 2ms, sliding average: 1ms
+Iteration 823 completed in 1ms, sliding average: 1ms
+Iteration 824 completed in 2ms, sliding average: 1ms
+Iteration 825 completed in 2ms, sliding average: 1ms
+Iteration 826 completed in 1ms, sliding average: 1ms
+Iteration 827 completed in 2ms, sliding average: 1ms
+Iteration 828 completed in 1ms, sliding average: 1ms
+Iteration 829 completed in 2ms, sliding average: 1ms
+Iteration 830 completed in 2ms, sliding average: 1ms
+Iteration 831 completed in 1ms, sliding average: 1ms
+Iteration 832 completed in 2ms, sliding average: 1ms
+Iteration 833 completed in 2ms, sliding average: 1ms
+Iteration 834 completed in 1ms, sliding average: 1ms
+Iteration 835 completed in 2ms, sliding average: 1ms
+Iteration 836 completed in 2ms, sliding average: 1ms
+Iteration 837 completed in 1ms, sliding average: 1ms
+Iteration 838 completed in 2ms, sliding average: 1ms
+Iteration 839 completed in 2ms, sliding average: 1ms
+Iteration 840 completed in 1ms, sliding average: 1ms
+Iteration 841 completed in 2ms, sliding average: 1ms
+Iteration 842 completed in 1ms, sliding average: 1ms
+Iteration 843 completed in 1ms, sliding average: 1ms
+Iteration 844 completed in 2ms, sliding average: 1ms
+Iteration 845 completed in 2ms, sliding average: 1ms
+Iteration 846 completed in 2ms, sliding average: 1ms
+Iteration 847 completed in 1ms, sliding average: 1ms
+Iteration 848 completed in 2ms, sliding average: 1ms
+Iteration 849 completed in 2ms, sliding average: 1ms
+Iteration 850 completed in 2ms, sliding average: 1ms
+Iteration 851 completed in 1ms, sliding average: 1ms
+Iteration 852 completed in 2ms, sliding average: 1ms
+Iteration 853 completed in 2ms, sliding average: 1ms
+Iteration 854 completed in 1ms, sliding average: 1ms
+Iteration 855 completed in 2ms, sliding average: 1ms
+Iteration 856 completed in 1ms, sliding average: 1ms
+Iteration 857 completed in 2ms, sliding average: 1ms
+Iteration 858 completed in 2ms, sliding average: 1ms
+Iteration 859 completed in 1ms, sliding average: 1ms
+Iteration 860 completed in 2ms, sliding average: 1ms
+Iteration 861 completed in 2ms, sliding average: 1ms
+Iteration 862 completed in 1ms, sliding average: 1ms
+Iteration 863 completed in 2ms, sliding average: 1ms
+Iteration 864 completed in 2ms, sliding average: 1ms
+Iteration 865 completed in 1ms, sliding average: 1ms
+Iteration 866 completed in 2ms, sliding average: 1ms
+Iteration 867 completed in 1ms, sliding average: 1ms
+Iteration 868 completed in 2ms, sliding average: 1ms
+Iteration 869 completed in 2ms, sliding average: 1ms
+Iteration 870 completed in 1ms, sliding average: 1ms
+Iteration 871 completed in 2ms, sliding average: 1ms
+Iteration 872 completed in 2ms, sliding average: 1ms
+Iteration 873 completed in 1ms, sliding average: 1ms
+Iteration 874 completed in 2ms, sliding average: 1ms
+Iteration 875 completed in 2ms, sliding average: 1ms
+Iteration 876 completed in 1ms, sliding average: 1ms
+Iteration 877 completed in 2ms, sliding average: 1ms
+Iteration 878 completed in 1ms, sliding average: 1ms
+Iteration 879 completed in 2ms, sliding average: 1ms
+Iteration 880 completed in 2ms, sliding average: 1ms
+Iteration 881 completed in 1ms, sliding average: 1ms
+Iteration 882 completed in 2ms, sliding average: 1ms
+Iteration 883 completed in 2ms, sliding average: 1ms
+Iteration 884 completed in 1ms, sliding average: 1ms
+Iteration 885 completed in 2ms, sliding average: 1ms
+Iteration 886 completed in 2ms, sliding average: 1ms
+Iteration 887 completed in 1ms, sliding average: 1ms
+Iteration 888 completed in 2ms, sliding average: 1ms
+Iteration 889 completed in 1ms, sliding average: 1ms
+Iteration 890 completed in 2ms, sliding average: 1ms
+Iteration 891 completed in 2ms, sliding average: 1ms
+Iteration 892 completed in 1ms, sliding average: 1ms
+Iteration 893 completed in 2ms, sliding average: 1ms
+Iteration 894 completed in 2ms, sliding average: 1ms
+Iteration 895 completed in 1ms, sliding average: 1ms
+Iteration 896 completed in 2ms, sliding average: 1ms
+Iteration 897 completed in 1ms, sliding average: 1ms
+Iteration 898 completed in 2ms, sliding average: 1ms
+Iteration 899 completed in 2ms, sliding average: 1ms
+Iteration 900 completed in 1ms, sliding average: 1ms
+Iteration 901 completed in 2ms, sliding average: 1ms
+Iteration 902 completed in 2ms, sliding average: 1ms
+Iteration 903 completed in 1ms, sliding average: 1ms
+Iteration 904 completed in 2ms, sliding average: 1ms
+Iteration 905 completed in 2ms, sliding average: 1ms
+Iteration 906 completed in 1ms, sliding average: 1ms
+Iteration 907 completed in 2ms, sliding average: 1ms
+Iteration 908 completed in 2ms, sliding average: 1ms
+Iteration 909 completed in 1ms, sliding average: 1ms
+Iteration 910 completed in 2ms, sliding average: 1ms
+Iteration 911 completed in 2ms, sliding average: 1ms
+Iteration 912 completed in 1ms, sliding average: 1ms
+Iteration 913 completed in 2ms, sliding average: 1ms
+Iteration 914 completed in 2ms, sliding average: 1ms
+Iteration 915 completed in 1ms, sliding average: 1ms
+Iteration 916 completed in 2ms, sliding average: 1ms
+Iteration 917 completed in 2ms, sliding average: 1ms
+Iteration 918 completed in 1ms, sliding average: 1ms
+Iteration 919 completed in 2ms, sliding average: 1ms
+Iteration 920 completed in 2ms, sliding average: 1ms
+Iteration 921 completed in 1ms, sliding average: 1ms
+Iteration 922 completed in 2ms, sliding average: 1ms
+Iteration 923 completed in 2ms, sliding average: 1ms
+Iteration 924 completed in 1ms, sliding average: 1ms
+Iteration 925 completed in 2ms, sliding average: 1ms
+Iteration 926 completed in 2ms, sliding average: 1ms
+Iteration 927 completed in 1ms, sliding average: 1ms
+Iteration 928 completed in 2ms, sliding average: 1ms
+Iteration 929 completed in 2ms, sliding average: 1ms
+Iteration 930 completed in 1ms, sliding average: 1ms
+Iteration 931 completed in 2ms, sliding average: 1ms
+Iteration 932 completed in 2ms, sliding average: 1ms
+Iteration 933 completed in 1ms, sliding average: 1ms
+Iteration 934 completed in 2ms, sliding average: 1ms
+Iteration 935 completed in 2ms, sliding average: 1ms
+Iteration 936 completed in 1ms, sliding average: 1ms
+Iteration 937 completed in 2ms, sliding average: 1ms
+Iteration 938 completed in 2ms, sliding average: 1ms
+Iteration 939 completed in 1ms, sliding average: 1ms
+Iteration 940 completed in 2ms, sliding average: 1ms
+Iteration 941 completed in 2ms, sliding average: 1ms
+Iteration 942 completed in 1ms, sliding average: 1ms
+Iteration 943 completed in 2ms, sliding average: 1ms
+Iteration 944 completed in 2ms, sliding average: 1ms
+Iteration 945 completed in 1ms, sliding average: 1ms
+Iteration 946 completed in 2ms, sliding average: 1ms
+Iteration 947 completed in 2ms, sliding average: 1ms
+Iteration 948 completed in 1ms, sliding average: 1ms
+Iteration 949 completed in 2ms, sliding average: 1ms
+Iteration 950 completed in 2ms, sliding average: 1ms
+Iteration 951 completed in 1ms, sliding average: 1ms
+Iteration 952 completed in 2ms, sliding average: 1ms
+Iteration 953 completed in 2ms, sliding average: 1ms
+Iteration 954 completed in 1ms, sliding average: 1ms
+Iteration 955 completed in 2ms, sliding average: 1ms
+Iteration 956 completed in 2ms, sliding average: 1ms
+Iteration 957 completed in 1ms, sliding average: 1ms
+Iteration 958 completed in 2ms, sliding average: 1ms
+Iteration 959 completed in 2ms, sliding average: 1ms
+Iteration 960 completed in 1ms, sliding average: 1ms
+Iteration 961 completed in 2ms, sliding average: 1ms
+Iteration 962 completed in 2ms, sliding average: 1ms
+Iteration 963 completed in 1ms, sliding average: 1ms
+Iteration 964 completed in 2ms, sliding average: 1ms
+Iteration 965 completed in 2ms, sliding average: 1ms
+Iteration 966 completed in 1ms, sliding average: 1ms
+Iteration 967 completed in 2ms, sliding average: 1ms
+Iteration 968 completed in 2ms, sliding average: 1ms
+Iteration 969 completed in 1ms, sliding average: 1ms
+Iteration 970 completed in 2ms, sliding average: 1ms
+Iteration 971 completed in 2ms, sliding average: 1ms
+Iteration 972 completed in 1ms, sliding average: 1ms
+Iteration 973 completed in 2ms, sliding average: 1ms
+Iteration 974 completed in 2ms, sliding average: 1ms
+Iteration 975 completed in 1ms, sliding average: 1ms
+Iteration 976 completed in 2ms, sliding average: 1ms
+Iteration 977 completed in 2ms, sliding average: 1ms
+Iteration 978 completed in 1ms, sliding average: 1ms
+Iteration 979 completed in 2ms, sliding average: 1ms
+Iteration 980 completed in 2ms, sliding average: 1ms
+Iteration 981 completed in 1ms, sliding average: 1ms
+Iteration 982 completed in 2ms, sliding average: 1ms
+Iteration 983 completed in 2ms, sliding average: 1ms
+Iteration 984 completed in 1ms, sliding average: 1ms
+Iteration 985 completed in 2ms, sliding average: 1ms
+Iteration 986 completed in 2ms, sliding average: 1ms
+Iteration 987 completed in 1ms, sliding average: 1ms
+Iteration 988 completed in 2ms, sliding average: 1ms
+Iteration 989 completed in 2ms, sliding average: 1ms
+Iteration 990 completed in 2ms, sliding average: 1ms
+Iteration 991 completed in 1ms, sliding average: 1ms
+Iteration 992 completed in 2ms, sliding average: 1ms
+Iteration 993 completed in 2ms, sliding average: 1ms
+Iteration 994 completed in 1ms, sliding average: 1ms
+Iteration 995 completed in 2ms, sliding average: 1ms
+Iteration 996 completed in 2ms, sliding average: 1ms
+Iteration 997 completed in 1ms, sliding average: 1ms
+Iteration 998 completed in 2ms, sliding average: 1ms
+Iteration 999 completed in 2ms, sliding average: 1ms
+Iteration 1000 completed in 1ms, sliding average: 1ms
+Iteration 1001 completed in 2ms, sliding average: 1ms
+Iteration 1002 completed in 2ms, sliding average: 1ms
+Iteration 1003 completed in 2ms, sliding average: 1ms
+Iteration 1004 completed in 2ms, sliding average: 1ms
+Iteration 1005 completed in 1ms, sliding average: 1ms
+Iteration 1006 completed in 2ms, sliding average: 1ms
+Iteration 1007 completed in 1ms, sliding average: 1ms
+Iteration 1008 completed in 2ms, sliding average: 1ms
+Iteration 1009 completed in 2ms, sliding average: 1ms
+Iteration 1010 completed in 1ms, sliding average: 1ms
+Iteration 1011 completed in 2ms, sliding average: 1ms
+Iteration 1012 completed in 1ms, sliding average: 1ms
+Iteration 1013 completed in 2ms, sliding average: 1ms
+Iteration 1014 completed in 2ms, sliding average: 1ms
+Iteration 1015 completed in 1ms, sliding average: 1ms
+Iteration 1016 completed in 2ms, sliding average: 1ms
+Iteration 1017 completed in 1ms, sliding average: 1ms
+Iteration 1018 completed in 2ms, sliding average: 1ms
+Iteration 1019 completed in 2ms, sliding average: 1ms
+Iteration 1020 completed in 2ms, sliding average: 1ms
+Iteration 1021 completed in 1ms, sliding average: 1ms
+Iteration 1022 completed in 2ms, sliding average: 1ms
+Iteration 1023 completed in 1ms, sliding average: 1ms
+Iteration 1024 completed in 1ms, sliding average: 1ms
+Iteration 1025 completed in 2ms, sliding average: 1ms
+Iteration 1026 completed in 2ms, sliding average: 1ms
+Iteration 1027 completed in 1ms, sliding average: 1ms
+Iteration 1028 completed in 2ms, sliding average: 1ms
+Iteration 1029 completed in 2ms, sliding average: 1ms
+Iteration 1030 completed in 1ms, sliding average: 1ms
+Iteration 1031 completed in 2ms, sliding average: 1ms
+Iteration 1032 completed in 2ms, sliding average: 1ms
+Iteration 1033 completed in 1ms, sliding average: 1ms
+Iteration 1034 completed in 2ms, sliding average: 1ms
+Iteration 1035 completed in 2ms, sliding average: 1ms
+Iteration 1036 completed in 1ms, sliding average: 1ms
+Iteration 1037 completed in 2ms, sliding average: 1ms
+Iteration 1038 completed in 2ms, sliding average: 1ms
+Iteration 1039 completed in 1ms, sliding average: 1ms
+Iteration 1040 completed in 2ms, sliding average: 1ms
+Iteration 1041 completed in 2ms, sliding average: 1ms
+Iteration 1042 completed in 1ms, sliding average: 1ms
+Iteration 1043 completed in 2ms, sliding average: 1ms
+Iteration 1044 completed in 2ms, sliding average: 1ms
+Iteration 1045 completed in 1ms, sliding average: 1ms
+Iteration 1046 completed in 2ms, sliding average: 1ms
+Iteration 1047 completed in 2ms, sliding average: 1ms
+Iteration 1048 completed in 1ms, sliding average: 1ms
+Iteration 1049 completed in 2ms, sliding average: 1ms
+Iteration 1050 completed in 2ms, sliding average: 1ms
+Iteration 1051 completed in 1ms, sliding average: 1ms
+Iteration 1052 completed in 2ms, sliding average: 1ms
+Iteration 1053 completed in 2ms, sliding average: 1ms
+Iteration 1054 completed in 1ms, sliding average: 1ms
+Iteration 1055 completed in 2ms, sliding average: 1ms
+Iteration 1056 completed in 2ms, sliding average: 1ms
+Iteration 1057 completed in 1ms, sliding average: 1ms
+Iteration 1058 completed in 2ms, sliding average: 1ms
+Iteration 1059 completed in 2ms, sliding average: 1ms
+Iteration 1060 completed in 1ms, sliding average: 1ms
+Iteration 1061 completed in 2ms, sliding average: 1ms
+Iteration 1062 completed in 2ms, sliding average: 1ms
+Iteration 1063 completed in 1ms, sliding average: 1ms
+Iteration 1064 completed in 2ms, sliding average: 1ms
+Iteration 1065 completed in 2ms, sliding average: 1ms
+Iteration 1066 completed in 1ms, sliding average: 1ms
+Iteration 1067 completed in 2ms, sliding average: 1ms
+Iteration 1068 completed in 2ms, sliding average: 1ms
+Iteration 1069 completed in 1ms, sliding average: 1ms

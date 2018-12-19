@@ -1,0 +1,300 @@
+jstack -l 15541
+2018-12-19 18:58:21
+Full thread dump Java HotSpot(TM) 64-Bit Server VM (25.191-b12 mixed mode):
+
+"RMI Scheduler(0)" #20 daemon prio=9 os_prio=0 tid=0x00007f1138026800 nid=0x3f96 waiting on condition [0x00007f1182bbd000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000ec6f4010> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"RMI TCP Accept-4444" #18 daemon prio=9 os_prio=0 tid=0x00007f114c097000 nid=0x3edf runnable [0x00007f1182dbf000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.PlainSocketImpl.socketAccept(Native Method)
+	at java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:409)
+	at java.net.ServerSocket.implAccept(ServerSocket.java:545)
+	at java.net.ServerSocket.accept(ServerSocket.java:513)
+	at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:405)
+	at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:377)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"Attach Listener" #16 daemon prio=9 os_prio=0 tid=0x00007f117c001000 nid=0x3ede waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"info.ragozin.proflab.PlainInterlockReenterantLock-3" #14 daemon prio=5 os_prio=0 tid=0x00007f1158006000 nid=0x3cce waiting on condition [0x00007f11833ea000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000ec6d8cc8> (a java.util.concurrent.locks.ReentrantLock$FairSync)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(AbstractQueuedSynchronizer.java:836)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(AbstractQueuedSynchronizer.java:870)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(AbstractQueuedSynchronizer.java:1199)
+	at java.util.concurrent.locks.ReentrantLock$FairSync.lock(ReentrantLock.java:224)
+	at java.util.concurrent.locks.ReentrantLock.lock(ReentrantLock.java:285)
+	at info.ragozin.proflab.PlainInterlockReenterantLock.lockIn(PlainInterlockReenterantLock.java:162)
+	at info.ragozin.proflab.PlainInterlockReenterantLock.lockIn(PlainInterlockReenterantLock.java:165)
+	at info.ragozin.proflab.PlainInterlockReenterantLock.lockIn(PlainInterlockReenterantLock.java:165)
+	at info.ragozin.proflab.PlainInterlockReenterantLock.workerLoop(PlainInterlockReenterantLock.java:150)
+	at info.ragozin.proflab.PlainInterlockReenterantLock$2.run(PlainInterlockReenterantLock.java:125)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- <0x00000000ec6d8e58> (a java.util.concurrent.locks.ReentrantLock$FairSync)
+	- <0x00000000ec6d8f60> (a java.util.concurrent.locks.ReentrantLock$FairSync)
+
+"info.ragozin.proflab.PlainInterlockReenterantLock-2" #13 daemon prio=5 os_prio=0 tid=0x00007f1158004800 nid=0x3ccd waiting on condition [0x00007f11834eb000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000ec6d8e58> (a java.util.concurrent.locks.ReentrantLock$FairSync)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(AbstractQueuedSynchronizer.java:836)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(AbstractQueuedSynchronizer.java:870)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(AbstractQueuedSynchronizer.java:1199)
+	at java.util.concurrent.locks.ReentrantLock$FairSync.lock(ReentrantLock.java:224)
+	at java.util.concurrent.locks.ReentrantLock.lock(ReentrantLock.java:285)
+	at info.ragozin.proflab.PlainInterlockReenterantLock.lockIn(PlainInterlockReenterantLock.java:162)
+	at info.ragozin.proflab.PlainInterlockReenterantLock.lockIn(PlainInterlockReenterantLock.java:165)
+	at info.ragozin.proflab.PlainInterlockReenterantLock.lockIn(PlainInterlockReenterantLock.java:165)
+	at info.ragozin.proflab.PlainInterlockReenterantLock.workerLoop(PlainInterlockReenterantLock.java:150)
+	at info.ragozin.proflab.PlainInterlockReenterantLock$2.run(PlainInterlockReenterantLock.java:125)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- <0x00000000ec6d8cc8> (a java.util.concurrent.locks.ReentrantLock$FairSync)
+	- <0x00000000ec700788> (a java.util.concurrent.locks.ReentrantLock$FairSync)
+
+"info.ragozin.proflab.PlainInterlockReenterantLock-1" #12 daemon prio=5 os_prio=0 tid=0x00007f1158002800 nid=0x3ccc waiting on condition [0x00007f11835ec000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000ec6ff7c0> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.CyclicBarrier.dowait(CyclicBarrier.java:234)
+	at java.util.concurrent.CyclicBarrier.await(CyclicBarrier.java:362)
+	at info.ragozin.proflab.PlainInterlockReenterantLock.workerLoop(PlainInterlockReenterantLock.java:149)
+	at info.ragozin.proflab.PlainInterlockReenterantLock$2.run(PlainInterlockReenterantLock.java:125)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"info.ragozin.proflab.PlainInterlockReenterantLock-0" #11 daemon prio=5 os_prio=0 tid=0x00007f1158001000 nid=0x3ccb waiting on condition [0x00007f11836ed000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000ec6ff7c0> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.CyclicBarrier.dowait(CyclicBarrier.java:234)
+	at java.util.concurrent.CyclicBarrier.await(CyclicBarrier.java:362)
+	at info.ragozin.proflab.PlainInterlockReenterantLock.workerLoop(PlainInterlockReenterantLock.java:149)
+	at info.ragozin.proflab.PlainInterlockReenterantLock$2.run(PlainInterlockReenterantLock.java:125)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"PlainInterlockReenterantLock" #15 daemon prio=5 os_prio=0 tid=0x00007f11b4302800 nid=0x3cca waiting on condition [0x00007f11837ee000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000ec7013d8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.CyclicBarrier.dowait(CyclicBarrier.java:234)
+	at java.util.concurrent.CyclicBarrier.await(CyclicBarrier.java:362)
+	at info.ragozin.proflab.PlainInterlockReenterantLock.run(PlainInterlockReenterantLock.java:106)
+	at info.ragozin.proflab.DemoRunner$1.run(DemoRunner.java:19)
+
+   Locked ownable synchronizers:
+	- None
+
+"ping-20s" #10 daemon prio=5 os_prio=0 tid=0x00007f11b425a000 nid=0x3cc9 waiting on condition [0x00007f11838ef000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000ec701d70> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"surefire-forkedjvm-command-thread" #9 daemon prio=5 os_prio=0 tid=0x00007f11b4251800 nid=0x3cc8 runnable [0x00007f1183bfa000]
+   java.lang.Thread.State: RUNNABLE
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(FileInputStream.java:255)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	- locked <0x00000000ec6b2030> (a java.io.BufferedInputStream)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:386)
+	at java.lang.Thread.run(Thread.java:748)
+
+   Locked ownable synchronizers:
+	- None
+
+"Service Thread" #8 daemon prio=9 os_prio=0 tid=0x00007f11b4188800 nid=0x3cc6 runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"C1 CompilerThread2" #7 daemon prio=9 os_prio=0 tid=0x00007f11b4185000 nid=0x3cc5 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"C2 CompilerThread1" #6 daemon prio=9 os_prio=0 tid=0x00007f11b4183800 nid=0x3cc4 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"C2 CompilerThread0" #5 daemon prio=9 os_prio=0 tid=0x00007f11b4180800 nid=0x3cc3 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"Signal Dispatcher" #4 daemon prio=9 os_prio=0 tid=0x00007f11b417f000 nid=0x3cc2 runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"Finalizer" #3 daemon prio=8 os_prio=0 tid=0x00007f11b414c000 nid=0x3cc1 in Object.wait() [0x00007f11a0d93000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+	- locked <0x00000000ec6835d8> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:165)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:216)
+
+   Locked ownable synchronizers:
+	- None
+
+"Reference Handler" #2 daemon prio=10 os_prio=0 tid=0x00007f11b4149800 nid=0x3cc0 in Object.wait() [0x00007f11a0e94000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+	- locked <0x00000000ec68ca60> (a java.lang.ref.Reference$Lock)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+
+   Locked ownable synchronizers:
+	- None
+
+"main" #1 prio=5 os_prio=0 tid=0x00007f11b400a800 nid=0x3cb8 waiting on condition [0x00007f11bb45e000]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+	at java.lang.Thread.sleep(Native Method)
+	at info.ragozin.proflab.DemoRunner.<init>(DemoRunner.java:56)
+	at info.ragozin.proflab.ReenterantLockDeadlock.deadlock(ReenterantLockDeadlock.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:45)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:42)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:263)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:68)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:272)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:236)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+
+   Locked ownable synchronizers:
+	- None
+
+"VM Thread" os_prio=0 tid=0x00007f11b413f800 nid=0x3cbf runnable 
+
+"GC task thread#0 (ParallelGC)" os_prio=0 tid=0x00007f11b4020000 nid=0x3cbb runnable 
+
+"GC task thread#1 (ParallelGC)" os_prio=0 tid=0x00007f11b4021800 nid=0x3cbc runnable 
+
+"GC task thread#2 (ParallelGC)" os_prio=0 tid=0x00007f11b4023800 nid=0x3cbd runnable 
+
+"GC task thread#3 (ParallelGC)" os_prio=0 tid=0x00007f11b4025000 nid=0x3cbe runnable 
+
+"VM Periodic Task Thread" os_prio=0 tid=0x00007f11b418d800 nid=0x3cc7 waiting on condition 
+
+JNI global references: 209
+
+
+Found one Java-level deadlock:
+=============================
+"info.ragozin.proflab.PlainInterlockReenterantLock-3":
+  waiting for ownable synchronizer 0x00000000ec6d8cc8, (a java.util.concurrent.locks.ReentrantLock$FairSync),
+  which is held by "info.ragozin.proflab.PlainInterlockReenterantLock-2"
+"info.ragozin.proflab.PlainInterlockReenterantLock-2":
+  waiting for ownable synchronizer 0x00000000ec6d8e58, (a java.util.concurrent.locks.ReentrantLock$FairSync),
+  which is held by "info.ragozin.proflab.PlainInterlockReenterantLock-3"
+
+Java stack information for the threads listed above:
+===================================================
+"info.ragozin.proflab.PlainInterlockReenterantLock-3":
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000ec6d8cc8> (a java.util.concurrent.locks.ReentrantLock$FairSync)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(AbstractQueuedSynchronizer.java:836)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(AbstractQueuedSynchronizer.java:870)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(AbstractQueuedSynchronizer.java:1199)
+	at java.util.concurrent.locks.ReentrantLock$FairSync.lock(ReentrantLock.java:224)
+	at java.util.concurrent.locks.ReentrantLock.lock(ReentrantLock.java:285)
+	at info.ragozin.proflab.PlainInterlockReenterantLock.lockIn(PlainInterlockReenterantLock.java:162)
+	at info.ragozin.proflab.PlainInterlockReenterantLock.lockIn(PlainInterlockReenterantLock.java:165)
+	at info.ragozin.proflab.PlainInterlockReenterantLock.lockIn(PlainInterlockReenterantLock.java:165)
+	at info.ragozin.proflab.PlainInterlockReenterantLock.workerLoop(PlainInterlockReenterantLock.java:150)
+	at info.ragozin.proflab.PlainInterlockReenterantLock$2.run(PlainInterlockReenterantLock.java:125)
+	at java.lang.Thread.run(Thread.java:748)
+"info.ragozin.proflab.PlainInterlockReenterantLock-2":
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000ec6d8e58> (a java.util.concurrent.locks.ReentrantLock$FairSync)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(AbstractQueuedSynchronizer.java:836)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(AbstractQueuedSynchronizer.java:870)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(AbstractQueuedSynchronizer.java:1199)
+	at java.util.concurrent.locks.ReentrantLock$FairSync.lock(ReentrantLock.java:224)
+	at java.util.concurrent.locks.ReentrantLock.lock(ReentrantLock.java:285)
+	at info.ragozin.proflab.PlainInterlockReenterantLock.lockIn(PlainInterlockReenterantLock.java:162)
+	at info.ragozin.proflab.PlainInterlockReenterantLock.lockIn(PlainInterlockReenterantLock.java:165)
+	at info.ragozin.proflab.PlainInterlockReenterantLock.lockIn(PlainInterlockReenterantLock.java:165)
+	at info.ragozin.proflab.PlainInterlockReenterantLock.workerLoop(PlainInterlockReenterantLock.java:150)
+	at info.ragozin.proflab.PlainInterlockReenterantLock$2.run(PlainInterlockReenterantLock.java:125)
+	at java.lang.Thread.run(Thread.java:748)
+
+Found 1 deadlock.
+
