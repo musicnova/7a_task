@@ -1,0 +1,3 @@
+jcmd 28636 ManagementAgent.start jmxremote.authenticate=false jmxremote.ssl=false jmxremote.port=5555 jmxremote.rmi.port=5555
+28636:
+Command executed successfully

@@ -1,0 +1,2 @@
+visualvm # localhost right click -> add jmx connection -> port 555
+# a/34566177

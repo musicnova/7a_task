@@ -1,0 +1,1 @@
+jmc # jvm browser -> click tools button add jvm connection -> localhost:5555
