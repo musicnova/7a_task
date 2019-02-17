@@ -1,0 +1,15 @@
+{
+  "url": "https://civilization.fandom.com/wiki/Swordsman_(Civ5)",
+  "name": "Swordsman",
+  "description": "Melee unit of the Classical era",
+  "productionCost": 75,
+  "combatStrength": 14,
+  "moves": 2,
+  "technology": "Iron working",
+  "resource": ["Iron"],
+  "upgradesTo": ["Longswordsman",
+    "Samurai",
+    "Berserker"
+  ],
+  "notes": []
+}
