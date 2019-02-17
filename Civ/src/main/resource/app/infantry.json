@@ -1,0 +1,11 @@
+{
+  "url": "https://civilization.fandom.com/wiki/Infantry_(Civ5)",
+  "name": "Infantry",
+  "description": "Gunpowder unit of the Modern era",
+  "productionCost": 375,
+  "combatStrength": 70,
+  "moves": 2,
+  "technology": "Plastics",
+  "upgradesTo": ["Mechanized infantry"],
+  "notes": []
+}
