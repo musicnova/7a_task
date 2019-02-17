@@ -1,0 +1,16 @@
+{
+  "url": "https://civilization.fandom.com/wiki/Infantry_(Civ5)",
+  "name": "Lancer",
+  "description": "Mounted unit of the Renaissance era",
+  "productionCost": 185,
+  "combatStrength": 25,
+  "moves": 4,
+  "technology": "Metallurgy",
+  "resource": ["Horses"],
+  "upgradesTo": ["Anti-tank gun"],
+  "notes": ["Penalty attacking cities",
+    "No defensive bonuses",
+    "Can move after attacking",
+    "Formation I"
+  ]
+}
