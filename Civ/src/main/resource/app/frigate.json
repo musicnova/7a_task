@@ -1,0 +1,16 @@
+{
+  "url": "https://civilization.fandom.com/wiki/Frigate_(Civ5)",
+  "name": "Frigate",
+  "description": "Naval Ranged unit of the Renaissance era",
+  "productionCost": 185,
+  "combatStrength": 25,
+  "moves": 5,
+  "range": 2,
+  "rangedStrength": 28,
+  "technology": "Navigation",
+  "resource": "Iron",
+  "upgradesTo": ["Battleship"],
+  "notes": [
+    "May not melee attack"
+  ]
+}
