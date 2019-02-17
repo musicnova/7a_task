@@ -1,4 +1,4 @@
-package json2schema;
+package jsonschema2pojo;
 
 public class ExampleTest {
 }

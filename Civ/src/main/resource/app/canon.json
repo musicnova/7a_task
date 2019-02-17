@@ -1,0 +1,18 @@
+{
+  "url": "https://civilization.fandom.com/wiki/Cannon_(Civ5)",
+  "name": "Cannon",
+  "description": "Siege unit of the Renaissance era",
+  "productionCost": 185,
+  "combatStrength": 14,
+  "moves": 2,
+  "range": 2,
+  "rangedStrength": 20,
+  "technology": "Chemistry",
+  "upgradesTo": "Artillery",
+  "notes": ["May not melee attack",
+    "Bonus vs cities (200%)",
+    "No defensive terrain bonuses",
+    "Must set up to ranged attack",
+    "Limited visibility"
+  ]
+}

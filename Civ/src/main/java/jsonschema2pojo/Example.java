@@ -1,7 +1,7 @@
-package json2schema;
+package jsonschema2pojo;
 
 public class Example {
-    
+
     // EXAMPLE http://andjo.free.fr/civ/CombatCalc2.htm
     // BASE https://forums.civfanatics.com/threads/civ4-combat-odds-calculator-excel-spreadsheet.148354/
 
