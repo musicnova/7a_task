@@ -1,0 +1,15 @@
+{
+  "url": "https://civilization.fandom.com/wiki/Trireme_(Civ5)",
+  "name": "Trireme",
+  "description": "Naval Melee unit of the ancient era",
+  "productionCost": 45,
+  "combatStrength": 10,
+  "moves": 4,
+  "technology": "Sailing",
+  "resource": [],
+  "upgradesTo": ["Caravel",
+    "Turtle ship", "Nau"],
+  "notes":[
+    "Cannot enter deep ocean"
+  ]
+}
